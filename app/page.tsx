@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col justify-between">
+    <div className="h-screen flex flex-col justify-between p-[2rem]">
       <NavBar />
       <div className='flex justify-center gap-5 sm:hidden py-5'>
         <a className="btn btn-outline btn-primary btn-sm">Tạo tài khoản</a>
