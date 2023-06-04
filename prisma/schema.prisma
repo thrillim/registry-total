@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -17,52 +14,54 @@ datasource db {
 // + The accounts of Department's admins and registry centers' admins
 
 model Car {
-  carId                   Int            @id @default(autoincrement())
+  ownerId                 String
   bienSo                  String         @unique
-  soQuanLy                String
-  loai                    String
-  nhanHieu                String
-  soLoai                  String
-  soMay                   String
-  soKhung                 String
-  namSx                   Int
-  nuocSx                  String
-  nienHanSd               Int?
-  kinhDoanh               Boolean
   caiTao                  Boolean
-  congThucBanhXe          String
-  vetBanhXe               String
-  kichThuocBao            String
-  ktKhoangHanhLyLonNhat   Int?
+  camera                  Boolean
+  carId                   Int            @id @default(autoincrement())
   chieuDaiCoSo            Int
+  congSuatLonNhat         Int?
+  congThucBanhXe          String
+  dayMaSoQuanLy           String
+  ghiChu                  String?
   khoiLuongBanThan        Int
   khoiLuongHangCc         Int?
-  khoiLuongToanBo         String?
   khoiLuongKeoTheo        String?
-  soNguoi                 String?
-  nhienLieu               String?
-  theTichLamViecCuaDongCo Int?
-  congSuatLonNhat         Int?
-  tocDoQuay               Int?
-  seri                    String?
-  lopTruc                 String?
-  thietBiGiamSatHanhTrinh Boolean
-  camera                  Boolean
+  khoiLuongToanBo         String?
   khongCapTemKiemDinh     Boolean
-  ghiChu                  String?
-  dayMaSoQuanLy           String
+  kichThuocBao            String
+  kinhDoanh               Boolean
+  ktKhoangHanhLyLonNhat   Int?
+  loai                    String
+  lopTruc                 String?
+  namSx                   Int
+  nhanHieu                String
+  nhienLieu               String?
+  nienHanSd               Int?
+  nuocSx                  String
+  seri                    String?
+  soKhung                 String
+  soLoai                  String
+  soMay                   String
+  soNguoi                 String?
+  soQuanLy                String
+  theTichLamViecCuaDongCo Int?
+  thietBiGiamSatHanhTrinh Boolean
+  tocDoQuay               Int?
+  vetBanhXe               String
   owner                   Owner          @relation(fields: [ownerId], references: [ownerId])
-  ownerId                 String
   RegistStatus            RegistStatus[]
+
+  @@index([ownerId], map: "Car_ownerId_fkey")
 }
 
 model Owner {
-  ownerId      String @id
-  ownerType    String
-  ownerName    String
-  ownerPhone   String
   ownerAddress String
   ownerEmail   String
+  ownerId      String @id
+  ownerName    String
+  ownerPhone   String
+  ownerType    String
   ownerCars    Car[]
 }
 
@@ -74,48 +73,53 @@ model RegistCenter {
   centerEmail   String
   centerManager String
   centerCode    String
-  RegistStatus  RegistStatus[]
   Account       Account[]
+  RegistStatus  RegistStatus[]
 }
 
 model RegistStatus {
   statusId         Int          @id @default(autoincrement())
-  RegistCenter     RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
   RegistCenterId   String
-  statusCar        Car          @relation(fields: [carId], references: [carId])
   carId            Int
   status           String
   statusCreatedAt  DateTime     @default(now())
   statusUpdatedAt  DateTime     @updatedAt
   statusNote       String?
   statusValidUntil DateTime?
+  RegistCenter     RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
+  statusCar        Car          @relation(fields: [carId], references: [carId])
+
+  @@index([RegistCenterId], map: "RegistStatus_RegistCenterId_fkey")
+  @@index([carId], map: "RegistStatus_carId_fkey")
 }
 
 model Account {
+  RegistCenterId       String
   accId                Int          @id @default(autoincrement())
-  accUsername          String       @unique
   accPassword          String
   accRole              String
-  RegistCenter         RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
-  RegistCenterId       String
   accStatus            String       @default("unverified")
+  accUsername          String       @unique
   accVerifiedAt        DateTime?
   accVerifiedByAccount Int?
+  RegistCenter         RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
+
+  @@index([RegistCenterId], map: "Account_RegistCenterId_fkey")
 }
 
 // + Manage valid period (months) of the car's register status follow the law effective date and the car's type
 // Cũ: 01 tháng 10 năm 2021
 // Mới: 22 tháng 3 năm 2023
 // Các Giấy chứng nhận kiểm định và Tem kiểm định đã được cấp trước ngày Thông tư này có hiệu lực thì tiếp tục được sử dụng đến hết thời hạn ghi trong Giấy chứng nhận kiểm định và Tem kiểm định.
-// nameCode format: <seat/special_car><commercial><year_from_produce/renovation>
-// seat/special_car: under9, over9, special
+// periodNameCode format: <seat/special_car><commercial><year_from_produce/renovation>
+// seat/special_car: to9, over9, special
 // commercial: com, nocom
-// year_from_produce/renovation: under5, under7, from7to20, over20, reno
+// year_from_produce/renovation: to5, to7, over7to20, over20, reno
 model ValidPeriod {
   periodId               Int      @id @default(autoincrement())
   periodNameCode         String
   periodName             String?
-  periodLawEffectiveDate DateTime
+  periodLawEffectiveDate DateTime @db.Date
   firstPeriod            Int
   fromSecondPeriod       Int
 }
