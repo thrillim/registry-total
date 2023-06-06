@@ -7,20 +7,113 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean @default(false)
-  userId    Int?
-  User      User?   @relation(fields: [userId], references: [id])
+// This database is to store the data of Register Department which manage 
+// + All the cars, their specifications, owner, and the car's register status
+// + All regeistry centers, their info, and their accounts
+// + All the car's register status, updated by the registry centers
+// + The accounts of Department's admins and registry centers' admins
 
-  @@index([userId], map: "Post_userId_fkey")
+model Car {
+  ownerId                 String
+  bienSo                  String         @unique
+  caiTao                  Boolean
+  camera                  Boolean
+  carId                   Int            @id @default(autoincrement())
+  chieuDaiCoSo            Int
+  congSuatLonNhat         Int?
+  congThucBanhXe          String
+  dayMaSoQuanLy           String
+  ghiChu                  String?
+  khoiLuongBanThan        Int
+  khoiLuongHangCc         Int?
+  khoiLuongKeoTheo        String?
+  khoiLuongToanBo         String?
+  khongCapTemKiemDinh     Boolean
+  kichThuocBao            String
+  kinhDoanh               Boolean
+  ktKhoangHanhLyLonNhat   Int?
+  loai                    String
+  lopTruc                 String?
+  namSx                   Int
+  nhanHieu                String
+  nhienLieu               String?
+  nienHanSd               Int?
+  nuocSx                  String
+  seri                    String?
+  soKhung                 String
+  soLoai                  String
+  soMay                   String
+  soNguoi                 String?
+  soQuanLy                String
+  theTichLamViecCuaDongCo Int?
+  thietBiGiamSatHanhTrinh Boolean
+  tocDoQuay               Int?
+  vetBanhXe               String
+  owner                   Owner          @relation(fields: [ownerId], references: [ownerId])
+  RegistStatus            RegistStatus[]
+
+  @@index([ownerId], map: "Car_ownerId_fkey")
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
+model Owner {
+  ownerAddress String
+  ownerEmail   String
+  ownerId      String @id
+  ownerName    String
+  ownerPhone   String
+  ownerType    String
+  ownerCars    Car[]
+}
+
+model RegistCenter {
+  centerId      Int         @id @default(autoincrement())
+  centerName    String
+  centerHotline String?
+  centerAddress String?
+  centerEmail   String
+  centerManager String?
+  centerCode    String
+  centerStatus  Boolean     @default(true)
+  Account       Account[]
+  RegistStatus  RegistStatus[]
+}
+
+model RegistStatus {
+  statusId         Int          @id @default(autoincrement())
+  RegistCenterId   Int
+  carId            Int
+  status           String
+  statusCreatedAt  DateTime     @default(now())
+  statusUpdatedAt  DateTime     @updatedAt
+  statusNote       String?
+  statusValidUntil DateTime?
+  RegistCenter     RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
+  statusCar        Car          @relation(fields: [carId], references: [carId])
+
+  @@index([RegistCenterId], map: "RegistStatus_RegistCenterId_fkey")
+  @@index([carId], map: "RegistStatus_carId_fkey")
+}
+
+model Account {
+  RegistCenterId       Int
+  accId                Int          @id @default(autoincrement())
+  accPassword          String
+  accTemptPassword     String?
+  accRole              String
+  accStatus            String       @default("Invalidate")
+  accUsername          String       @unique
+  accVerifiedAt        DateTime?
+  accVerifiedByAccount Int?
+  RegistCenter         RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
+
+  @@index([RegistCenterId], map: "Account_RegistCenterId_fkey")
+}
+
+model ValidPeriod {
+  periodId               Int      @id @default(autoincrement())
+  periodNameCode         String
+  periodName             String?
+  periodLawEffectiveDate DateTime @db.Date
+  firstPeriod            Int
+  fromSecondPeriod       Int
 }

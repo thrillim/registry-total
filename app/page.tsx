@@ -15,5 +15,5 @@ export default function Home() {
       <div className="divider"></div> 
       <About />
     </div>
-  )
+  );
 }
