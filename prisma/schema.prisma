@@ -66,20 +66,21 @@ model Owner {
 }
 
 model RegistCenter {
-  centerId      String         @id
+  centerId      Int         @id @default(autoincrement())
   centerName    String
-  centerHotline String
-  centerAddress String
+  centerHotline String?
+  centerAddress String?
   centerEmail   String
-  centerManager String
+  centerManager String?
   centerCode    String
+  centerStatus  Boolean     @default(true)
   Account       Account[]
   RegistStatus  RegistStatus[]
 }
 
 model RegistStatus {
   statusId         Int          @id @default(autoincrement())
-  RegistCenterId   String
+  RegistCenterId   Int
   carId            Int
   status           String
   statusCreatedAt  DateTime     @default(now())
@@ -94,11 +95,12 @@ model RegistStatus {
 }
 
 model Account {
-  RegistCenterId       String
+  RegistCenterId       Int
   accId                Int          @id @default(autoincrement())
   accPassword          String
+  accTemptPassword     String?
   accRole              String
-  accStatus            String       @default("unverified")
+  accStatus            String       @default("Invalidate")
   accUsername          String       @unique
   accVerifiedAt        DateTime?
   accVerifiedByAccount Int?
@@ -107,14 +109,6 @@ model Account {
   @@index([RegistCenterId], map: "Account_RegistCenterId_fkey")
 }
 
-// + Manage valid period (months) of the car's register status follow the law effective date and the car's type
-// Cũ: 01 tháng 10 năm 2021
-// Mới: 22 tháng 3 năm 2023
-// Các Giấy chứng nhận kiểm định và Tem kiểm định đã được cấp trước ngày Thông tư này có hiệu lực thì tiếp tục được sử dụng đến hết thời hạn ghi trong Giấy chứng nhận kiểm định và Tem kiểm định.
-// periodNameCode format: <seat/special_car><commercial><year_from_produce/renovation>
-// seat/special_car: to9, over9, special
-// commercial: com, nocom
-// year_from_produce/renovation: to5, to7, over7to20, over20, reno
 model ValidPeriod {
   periodId               Int      @id @default(autoincrement())
   periodNameCode         String
