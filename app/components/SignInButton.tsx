@@ -6,8 +6,8 @@ import Link from 'next/link';
 export default function SignInButton() {
   const { data: session } = useSession();
 
-  if (session && session.user) {
-    console.log(session.user);
+  if (session && session.user.accId) {
+    console.log(session);
     return (
       <div className='flex justify-around gap-2 align-middle'>
         <Link
