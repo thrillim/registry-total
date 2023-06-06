@@ -34,9 +34,6 @@ export default function SignInButton() {
       >
         Sign in
       </button>
-      <button className='btn btn-sm btn-primary'>
-        <Link href='/signUp'>New account</Link>
-      </button>
     </div>
   );
 }
