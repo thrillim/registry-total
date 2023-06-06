@@ -34,12 +34,12 @@ const handler = NextAuth({
 
         const user = await res.json();
 
-        if (user) {
+        if (user.accId) {
           // Any object returned will be saved in `user` property of the JWT
           return user;
         } else {
           // If you return null or false then the credentials will be rejected
-          return null;
+          throw new Error("Wrong username or password")
         }
       },
     }),

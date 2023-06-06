@@ -1,18 +1,33 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function SignIn() {
+  const router = useRouter();
   const username = useRef('');
   const password = useRef('');
+  const [showError, setShowError] = useState(false);
 
-  const onSubmit = async () => {
-    const result = await signIn("credentials", {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    const result = await signIn('credentials', {
       username: username.current,
       password: password.current,
-      redirect: true,
-      callbackUrl: "/",
+      redirect: false,
     });
+
+    if (result.error) {
+      // Handle incorrect credentials
+      console.log(result.error);
+      setShowError(true);
+    } else {
+      // Handle successful sign-in
+      console.log('Signed in successfully', result);
+      // redirect to homepage
+      router.push('/');
+    }
   };
 
   return (
@@ -48,6 +63,14 @@ export default function SignIn() {
                 className='input input-bordered w-full max-w-xs text-black'
                 onChange={(e) => (password.current = e.target.value)}
               />
+              {showError && (
+                <label className='label'>
+                  <span className='label-text text-error'>
+                    Sai tên đăng nhập hoặc mật khẩu
+                  </span>
+                </label>
+              )}
+
               <label className='label'>
                 <a
                   href='#'
