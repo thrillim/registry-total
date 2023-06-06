@@ -1,6 +1,6 @@
 import { prisma } from '../client';
 import * as bcrypt from 'bcrypt';
-// import { signJwtAccessToken } from '../../../lib/jwt';
+import { signJwtAccessToken } from '../../../lib/jwt';
 
 /* Defines the structure of the request body. */
 interface RequestBody {
@@ -46,15 +46,15 @@ export async function POST(request: Request) {
     }
 
     const { accPassword, accTemptPassword, ...userWithoutPassword } = user;
-    return new Response(JSON.stringify(userWithoutPassword), { status: 200 });
+    // return new Response(JSON.stringify(userWithoutPassword), { status: 200 });
 
-    // const accesstoken = signJwtAccessToken(userWithoutPassword);
-    // const res = {
-    //   ...userWithoutPassword,
-    //   accesstoken,
-    // };
+    const accesstoken = signJwtAccessToken(userWithoutPassword);
+    const res = {
+      ...userWithoutPassword,
+      accesstoken,
+    };
 
-    // return new Response(JSON.stringify(res), { status: 200 });
+    return new Response(JSON.stringify(res), { status: 200 });
   } catch (err: any) {
     return new Response(JSON.stringify({ message: err.message }), {
       status: 500,
