@@ -20,7 +20,7 @@ export default function SignInButton() {
           className='btn btn-sm btn-error'
           onClick={() => signOut({ callbackUrl: 'http://localhost:3000' })}
         >
-          Sign out
+          Đăng xuất
         </button>
       </div>
     );
@@ -32,7 +32,7 @@ export default function SignInButton() {
         className='btn btn-sm btn-outline btn-primary'
         onClick={() => signIn()}
       >
-        Sign in
+        Đăng nhập
       </button>
     </div>
   );
