@@ -46,7 +46,7 @@ export default function SignIn() {
                             </label>
                         </div>
                         <div className="form-control w-full max-w-xs mt-6">
-                            <button className="btn btn-primary">Đăng nhập</button>
+                            <button className="btn btn-outline btn-secondary">Đăng nhập</button>
                         </div>
                     </div>
                 </div>
