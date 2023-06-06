@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import Homepage from './components/Homepage/page';
-import About from './components/About/page';
+import Homepage from './components/Homepage/Home';
+import About from './components/About/About';
 
 export const metadata: Metadata = {
   title: 'Registry Total',

@@ -27,7 +27,6 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="hidden sm:flex navbar-end gap-1">
-        <a className="btn btn-outline btn-primary btn-sm md:btn-xl">Tạo tài khoản</a>
         <a className="btn btn-primary btn-sm md:btn-xl">Đăng nhập</a>
       </div>
     </div>
