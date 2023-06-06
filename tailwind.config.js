@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,6 +12,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'sign-in': "url('../public/signin_xl.svg')",
       },
     },
   },
@@ -22,7 +24,7 @@ module.exports = {
           "primary": "#02223C",
           "secondary": "#075985",
           "accent": "#006661",
-          "neutral": "#F8F8F1",
+          "neutral": "#B6D4EC",
           "base-100": "#FFFFFF",
           "info": "#B6D4EC",
           "success": "#bae6fd",
