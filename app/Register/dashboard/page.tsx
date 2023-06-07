@@ -51,14 +51,14 @@ export default async function RegisterDashboarḍ̣̣̣() {
     return (
         <>
             <div className="flex flex-col bg-white">
-                <div className="border-b">
+                <div className="border-b z-50">
                     <MainNav className="sticky top-0" />
                 </div>
 
                 {/* Trung tam dang kiem */}
                 <div id='Center' className="flex-1 space-y-4 p-8 pt-6 bg-base-100 w-full min-h-screen max-h-screen">
                     <h2 className="font-bold text-3xl text-primary mx-10">Trung tâm Đăng kiểm</h2>
-                    <div className="container mx-auto py-10 text-black max-h-[60%]">
+                    <div className="container mx-auto py-10 text-black max-h-[40rem]">
                         <DataTable columns={columns} data={await fetchCenters()} />
                     </div>
                     <div className="my-5 ml-10 btn btn-primary">
@@ -74,6 +74,27 @@ export default async function RegisterDashboarḍ̣̣̣() {
                     <div className="container mx-auto py-10 text-black">
                         <AddCenterForm />
                     </div>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Cấp tài khoản cho trung tâm đăng kiểm */}
+                <div id="AddAccount" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Cấp tài khoản</h2>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Quản lý đăng kiểm */}
+                <div id="ManageReg" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Quản lý đăng kiểm</h2>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Quản lý đăng kiểm */}
+                <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
                 </div>
             </div>
         </>

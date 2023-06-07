@@ -26,11 +26,13 @@ export default function MainNav({
                             />
                         </svg>
                     </label>
-                    <ul tabIndex={0} className="dropdown-content menu p-2 glass shadow bg-base-100 rounded-box w-max text-black text-md font-semibold">
+                    <ul tabIndex={0} className="dropdown-content menu
+                    p-2 glass shadow bg-base-100 rounded-box w-max 
+                    text-black text-md font-semibold">
                         <li><a href="#Center">Trung tâm đăng kiểm</a></li>
-                        <li><a>Cấp tài khoản </a></li>
-                        <li><a>Quản lý đăng kiểm </a></li>
-                        <li><a>Quản lý ô tô </a></li>
+                        <li><a href="#AddAccount">Cấp tài khoản </a></li>
+                        <li><a href="#ManageReg">Quản lý đăng kiểm </a></li>
+                        <li><a href="#ManageCars">Quản lý ô tô </a></li>
                     </ul>
                 </div>
                 <a className='btn btn-ghost normal-case text-xl text-accent gap-2'>
