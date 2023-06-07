@@ -1,21 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
-
-import { Button } from "@/app/components/shadcn-ui/button";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle
-} from "@/app/components/shadcn-ui/card";
-
-import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger
-} from "@/app/components/shadcn-ui/tabs";
 
 import MainNav from './main-nav'
 
@@ -28,6 +11,7 @@ export const metadata: Metadata = {
 }
 
 import AddCenterForm from "./center-form";
+import AddAccountForm from "./account-form";
 
 async function fetchCenters(): Promise<Center[]> {
     // const res = await fetch("...")
@@ -81,6 +65,9 @@ export default async function RegisterDashboarḍ̣̣̣() {
                 {/* Cấp tài khoản cho trung tâm đăng kiểm */}
                 <div id="AddAccount" className="p-8 pt-6 bg-base-100 w-full h-screen">
                     <h2 className="font-bold text-3xl text-primary mx-10">Cấp tài khoản</h2>
+                    <div className="container mx-auto py-10 text-black">
+                        <AddAccountForm />
+                    </div>
                 </div>
 
                 <div className="divider"></div>
@@ -92,7 +79,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
 
                 <div className="divider"></div>
 
-                {/* Quản lý đăng kiểm */}
+                {/* Quản lý ô tô*/}
                 <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full h-screen">
                     <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
                 </div>
