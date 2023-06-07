@@ -22,7 +22,6 @@ model Car {
   chieuDaiCoSo            Int
   congSuatLonNhat         Int?
   congThucBanhXe          String
-  dayMaSoQuanLy           String
   ghiChu                  String?
   khoiLuongBanThan        Int
   khoiLuongHangCc         Int?
@@ -66,16 +65,17 @@ model Owner {
 }
 
 model RegistCenter {
-  centerId      Int         @id @default(autoincrement())
-  centerName    String
-  centerHotline String?
-  centerAddress String?
-  centerEmail   String
-  centerManager String?
-  centerCode    String
-  centerStatus  Boolean     @default(true)
-  Account       Account[]
-  RegistStatus  RegistStatus[]
+  centerId       Int            @id @default(autoincrement())
+  centerName     String
+  centerHotline  String?
+  centerAddress  String?
+  centerEmail    String
+  centerManager  String?
+  centerCode     String
+  centerStatus   Boolean        @default(true)
+  centerProvince String
+  Account        Account[]
+  RegistStatus   RegistStatus[]
 }
 
 model RegistStatus {
@@ -98,17 +98,18 @@ model Account {
   RegistCenterId       Int
   accId                Int          @id @default(autoincrement())
   accPassword          String
-  accTemptPassword     String?
   accRole              String
   accStatus            String       @default("Invalidate")
   accUsername          String       @unique
   accVerifiedAt        DateTime?
   accVerifiedByAccount Int?
+  accTemptPassword     String?
   RegistCenter         RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
 
   @@index([RegistCenterId], map: "Account_RegistCenterId_fkey")
 }
 
+// ValidPeriod is to store the valid period of the car's register status
 model ValidPeriod {
   periodId               Int      @id @default(autoincrement())
   periodNameCode         String
