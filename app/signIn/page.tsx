@@ -17,16 +17,17 @@ export default function SignIn() {
       password: password.current,
       redirect: false,
     });
-
-    if (result.error) {
-      // Handle incorrect credentials
-      console.log(result.error);
-      setShowError(true);
-    } else {
-      // Handle successful sign-in
-      console.log('Signed in successfully', result);
-      // redirect to homepage
-      router.push('/');
+    if (result != null) {
+      if (result.error) {
+        // Handle incorrect credentials
+        console.log(result.error);
+        setShowError(true);
+      } else {
+        // Handle successful sign-in
+        console.log('Signed in successfully', result);
+        // redirect to homepage
+        router.push('/');
+      }
     }
   };
 
