@@ -9,7 +9,7 @@ export default function SignIn() {
   const password = useRef('');
   const [showError, setShowError] = useState(false);
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
     const result = await signIn('credentials', {
@@ -49,6 +49,8 @@ export default function SignIn() {
               <input
                 type='text'
                 placeholder='Tên đăng nhập'
+                autoComplete='username'
+                required
                 className='input input-bordered w-full max-w-xs text-black'
                 onChange={(e) => (username.current = e.target.value)}
               />
@@ -60,6 +62,8 @@ export default function SignIn() {
               <input
                 type='password'
                 placeholder='Mật khẩu'
+                autoComplete='current-password'
+                required
                 className='input input-bordered w-full max-w-xs text-black'
                 onChange={(e) => (password.current = e.target.value)}
               />
