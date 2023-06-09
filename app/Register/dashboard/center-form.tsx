@@ -98,13 +98,14 @@ export default function AddCenterForm() {
                                 <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
                             </label>
 
-                            <select name="city" id="city"
+                            <select name="city" id="center-city"
                                 required
                                 className='select select-bordered'
-                                onChange={(e) => centerProvince.current = e.target.value}>
-                                <option disabled selected className='text-gray-700 font-light'>Chọn tỉnh/thành phố</option>
+                                onChange={(e) => centerProvince.current = e.target.value}
+                                defaultValue={'DEFAULT'} >
+                                <option key={"none"} value={'DEFAULT'} disabled className='text-gray-700 font-light'>Chọn tỉnh/thành phố</option>
                                 {provinces.map((province) => (
-                                    <option value={province}>{province}</option>
+                                    <option key={province} value={province}>{province}</option>
                                 ))}
                             </select>
                         </div>
@@ -142,10 +143,11 @@ export default function AddCenterForm() {
                             </label>
                             <select name="status" id="status"
                                 className='select select-bordered'
-                                onChange={(e) => (state.current = e.target.value)}>
-                                <option disabled selected className='text-gray-700 font-light'>Chọn trạng thái</option>
-                                <option value="Hoạt động">Hoạt động</option>
-                                <option value="Đóng cửa">Đóng cửa</option>
+                                onChange={(e) => (state.current = e.target.value)}
+                                defaultValue={'DEFAULT'}>
+                                <option key={"none"} value={'DEFAULT'} disabled className='text-gray-700 font-light'>Chọn trạng thái</option>
+                                <option key="active" value="Hoạt động">Hoạt động</option>
+                                <option key="inactive" value="Đóng cửa">Đóng cửa</option>
                             </select>
                         </div>
                     </div>
