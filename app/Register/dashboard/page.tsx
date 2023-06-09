@@ -16,7 +16,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
   return (
     <>
       <div className='flex flex-col bg-white'>
-        <div className='border-b'>
+        <div className='border-b z-50'>
           <MainNav />
         </div>
         <div className='flex-1 space-y-4 p-8 pt-6 bg-base-100 w-full'>
