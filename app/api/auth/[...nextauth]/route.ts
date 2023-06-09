@@ -39,7 +39,7 @@ export const authOptions = {
           return user;
         } else {
           // If you return null or false then the credentials will be rejected
-          throw new Error("Wrong username or password")
+          throw new Error('Wrong username or password');
         }
       },
     }),
@@ -48,11 +48,11 @@ export const authOptions = {
     signIn: '/signIn',
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user }: { token: any; user: any }) {
       return { ...token, ...user };
     },
 
-    async session({ session, token }) {
+    async session({ session, token }: { session: any; token: any }) {
       session.user = token as any;
       return session;
     },

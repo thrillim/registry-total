@@ -13,11 +13,11 @@ export async function GET(request: Request) {
       const carPaltes = await prisma.car.findMany({
         select: {
           carId: true,
-          bienSo: true
-        }
+          bienSo: true,
+        },
       });
       return new Response(JSON.stringify(carPaltes), { status: 200 });
-    } catch (error) {
+    } catch (error: any) {
       return new Response(JSON.stringify({ message: error.message }), {
         status: 500,
       });
