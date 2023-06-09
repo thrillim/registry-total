@@ -1,29 +1,52 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import stations from '@/public/stations.json';
 
 // get centers from json file
 let centers: [[string, string]] = [['', '']];
 
 for (let i = 0; i < stations.stations.length; i++) {
-    centers.push([stations.stations[i].stationsName, stations.stations[i].stationCode]);
+  centers.push([
+    stations.stations[i].stationsName,
+    stations.stations[i].stationCode,
+  ]);
 }
 
 centers.shift();
 
+
+
 export default function AddAccountForm() {
     const [centerCode, setCenterCode] = useState(centers[0][1]);
-    const password = useRef('');
+    const usernameRef = useRef();
+    const passwordRef = useRef();
     const [showError, setShowError] = useState(false);
-    const [username, setUsername] = useState('');
+
+    const formHandler = useCallback(
+      () => (event) => {
+        event.preventDefault();
+
+        const data = {
+          centerCode: centerCode,
+          username: usernameRef.current?.value,
+          password: passwordRef.current?.value,
+          // passwordConfirmation: passwordConfirmationInputElement.current?.value
+        };
+
+        console.log(data);
+        // other send form logic here
+        // ...
+      },
+      []
+    );
 
     return (
       <>
         <div className='card container mx-auto w-max bg-base-100 shadow-xl'>
           <form
-            action=''
             className='card-body flex flex-col gap-5 mx-auto px-10 py-10'
+            onSubmit={formHandler()}
           >
             <div className='form-control w-full max-w-xs'>
               <label className='label'>
@@ -42,7 +65,7 @@ export default function AddAccountForm() {
                 className='select select-bordered'
                 onChange={(e) => {
                   setCenterCode(e.target.value);
-                  setUsername(e.target.value);
+                  usernameRef.current.value = e.target.value;
                 }}
                 defaultValue={'DEFAULT'}
               >
@@ -76,12 +99,10 @@ export default function AddAccountForm() {
               <input
                 type='text'
                 placeholder='Tên đăng nhập'
-                autoComplete='username'
+                ref={usernameRef}
                 required
                 className='input input-bordered w-full max-w-xs text-black'
                 inputMode='text'
-                onChange={(e) => setUsername(e.target.value)}
-                value={username}
               />
             </div>
             <div className='form-control w-full max-w-xs'>
@@ -94,27 +115,26 @@ export default function AddAccountForm() {
               <input
                 type='password'
                 placeholder='Mật khẩu'
-                autoComplete='password'
+                ref={passwordRef}
                 required
                 className='input input-bordered w-full max-w-xs text-black'
-                onChange={(e) => (password.current = e.target.value)}
               />
             </div>
+            <div className='flex flex-row gap-4 mx-auto mb-4'>
+              <div
+                className='btn btn-outline btn-neutral'
+                onClick={() => {}}
+              >
+                Hủy bỏ
+              </div>
+              <button
+                type='submit'
+                className='btn btn-primary'
+              >
+                Thêm mới
+              </button>
+            </div>
           </form>
-          <div className='flex flex-row gap-4 mx-auto mb-4'>
-            <div
-              className='btn btn-outline btn-neutral'
-              onClick={() => {}}
-            >
-              Hủy bỏ
-            </div>
-            <div
-              className='btn btn-primary'
-              onClick={() => {}}
-            >
-              Thêm mới
-            </div>
-          </div>
         </div>
       </>
     );
