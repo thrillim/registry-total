@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import { Button } from '@/app/components/shadcn-ui/button';
 import MainNav from './main-nav';
 import Centers from './centers-table';
+import AddAccountForm from "./account-form";
+import AddCenterForm from "./center-form";
+import RegisterSummary from "./summary";
 
 export const metadata: Metadata = {
   title: 'Cục Đăng kiểm Việt Nam',
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
 export default async function RegisterDashboarḍ̣̣̣() {
   return (
     <>
-      <div className='flex flex-col'>
+      <div className='flex flex-col bg-white'>
         <div className='border-b'>
           <MainNav />
         </div>
@@ -27,6 +30,43 @@ export default async function RegisterDashboarḍ̣̣̣() {
             <a href='#'>Thêm mới</a>
           </div>
         </div>
+
+        <div className="divider "></div>
+
+                {/* Them moi trung tam */}
+                <div id="AddCenter" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Thêm Trung tâm đăng kiểm</h2>
+                    <div className="container mx-auto py-10 text-black">
+                        <AddCenterForm />
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Cấp tài khoản cho trung tâm đăng kiểm */}
+                <div id="AddAccount" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Cấp tài khoản</h2>
+                    <div className="container mx-auto py-10 text-black">
+                        <AddAccountForm />
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Quản lý đăng kiểm */}
+                <div id="ManageReg" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Quản lý đăng kiểm</h2>
+                    <div>
+                        <RegisterSummary />
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                {/* Quản lý ô tô*/}
+                <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full h-screen">
+                    <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
+                </div>
       </div>
     </>
   );

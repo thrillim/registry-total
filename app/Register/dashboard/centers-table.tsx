@@ -3,7 +3,7 @@ import { Center, columns } from './columns';
 import { DataTable } from '@/app/components/shadcn-ui/data-table';
 import useSWR  from 'swr';
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
 export default function Centers() {
   // const data = await fetch('http://localhost:3000/api/getCenters');
@@ -11,7 +11,7 @@ export default function Centers() {
   // console.log('Love you');
   // console.log(centers);
   const { data: centers, error, isLoading } = useSWR(
-    'http://localhost:3000/api/getCenters',
+    'http://localhost:3000/RegistCenter.json',
     fetcher
   );
   if (error) return 'An error has occurred.';
