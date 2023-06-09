@@ -13,6 +13,8 @@ export const metadata: Metadata = {
 import AddCenterForm from "./center-form";
 import AddAccountForm from "./account-form";
 
+import RegisterSummary from "./summary";
+
 async function fetchCenters(): Promise<Center[]> {
     // const res = await fetch("...")
     // const data = await res.json()
@@ -40,7 +42,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
                 </div>
 
                 {/* Trung tam dang kiem */}
-                <div id='Center' className="flex-1 space-y-4 p-8 pt-6 bg-base-100 w-full min-h-screen max-h-screen">
+                <div id='Center' className="flex-1 space-y-4 p-8 pt-8 bg-base-100 w-full min-h-screen max-h-screen">
                     <h2 className="font-bold text-3xl text-primary mx-10">Trung tâm Đăng kiểm</h2>
                     <div className="container mx-auto py-10 text-black max-h-[40rem]">
                         <DataTable columns={columns} data={await fetchCenters()} />
@@ -75,6 +77,9 @@ export default async function RegisterDashboarḍ̣̣̣() {
                 {/* Quản lý đăng kiểm */}
                 <div id="ManageReg" className="p-8 pt-6 bg-base-100 w-full h-screen">
                     <h2 className="font-bold text-3xl text-primary mx-10">Quản lý đăng kiểm</h2>
+                    <div className="container mx-auto py-5">
+                        <RegisterSummary />
+                    </div>
                 </div>
 
                 <div className="divider"></div>
@@ -82,6 +87,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
                 {/* Quản lý ô tô*/}
                 <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full h-screen">
                     <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
+                    
                 </div>
             </div>
         </>
