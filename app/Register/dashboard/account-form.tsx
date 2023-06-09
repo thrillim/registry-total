@@ -14,9 +14,10 @@ centers.shift();
 
 export default function AddAccountForm() {
     const centerCode = useRef('');
-    const username = useRef('');
+    // const username = useRef('');
     const password = useRef('');
     const [showError, setShowError] = useState(false);
+    const [username, setUsername] = useState('');
 
     return (
         <>
@@ -34,7 +35,7 @@ export default function AddAccountForm() {
                             required
                             className='select select-bordered'
                             onChange={(e) => {centerCode.current = e.target.value;
-                                    username.current = e.target.value;}}>
+                                setUsername(e.target.value);}}>
                             <option disabled selected className='text-gray-700 font-light'>Chọn tỉnh/thành phố</option>
                             {centers.map((center) => (
                                 <option value={center[1]}>{center[0]}</option>
@@ -54,9 +55,10 @@ export default function AddAccountForm() {
                             autoComplete='username'
                             required
                             className='input input-bordered w-full max-w-xs text-black'
-                            defaultValue={username.current}
+                            // defaultValue={username.current}
                             inputMode='text'
-                            onChange={(e) => (username.current = e.target.value)}
+                            onChange = {(e)=> setUsername(e.target.value)}
+
                         />
                     </div>
                     <div className='form-control w-full max-w-xs'>
