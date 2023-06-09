@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-const handler = NextAuth({
+export const authOptions = {
   // Configure one or more authentication providers
   providers: [
     CredentialsProvider({
@@ -39,7 +39,7 @@ const handler = NextAuth({
           return user;
         } else {
           // If you return null or false then the credentials will be rejected
-          throw new Error("Wrong username or password")
+          throw new Error('Wrong username or password');
         }
       },
     }),
@@ -48,15 +48,17 @@ const handler = NextAuth({
     signIn: '/signIn',
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user }: { token: any; user: any }) {
       return { ...token, ...user };
     },
 
-    async session({ session, token }) {
+    async session({ session, token }: { session: any; token: any }) {
       session.user = token as any;
       return session;
     },
   },
-});
+};
+
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST };
