@@ -44,7 +44,7 @@ export default function MainNav({
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Cục Đăng kiểm Việt Nam</h1>
             </div>
             <div className="navbar-end">
-                <div className="btn btn-outline btn-primary btn-sm mx-2">Tài khoản</div>
+                <div className="btn btn-outline btn-primary btn-sm mx-2"><a href="http://localhost:3000/Register/account">Tài khoản</a></div>
                 <div className="btn btn-error btn-sm mx-2">Đăng xuất</div>
             </div>
         </nav>

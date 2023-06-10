@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { Button } from '@/app/components/shadcn-ui/button';
 import MainNav from './main-nav';
 import Centers from './centers-table';
 import AddAccountForm from "./account-form";
@@ -73,7 +72,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
         <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
           <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
           <div className="container mt-16">
-            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe sắp hết hạn đăng kiểm</h3>
+            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe đã và sắp hết hạn đăng kiểm</h3>
             <ExpiredCars />
           </div>
         </div>
