@@ -22,8 +22,8 @@ export default function AddCenterForm() {
 
     return (
         <>
-            <div className='card container mx-auto w-max bg-base-100 shadow-xl'>
-                <form action="" className='card-body mx-auto px-10 py-10'>
+            <div className='card container mx-auto w-max bg-base-100 shadow-xl card-bordered'>
+                <form action="" className='card-body mx-auto px-10 py-7'>
                     <div className='container flex flex-row gap-20'>
                         <div className='flex flex-col gap-3'>
                             <div className='form-control w-full max-w-xs'>

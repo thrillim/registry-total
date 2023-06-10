@@ -27,8 +27,6 @@ export default function AddAccountForm() {
     setIsPasswordVisible((prevState) => !prevState);
   }
 
-  // const [passwordState, setPasswordState] = useState('');
-
   const formHandler = useCallback(
     () => (event) => {
       event.preventDefault();
@@ -49,7 +47,7 @@ export default function AddAccountForm() {
 
   return (
     <>
-      <div className='card container mx-auto w-max bg-base-100 shadow-xl'>
+      <div className='card card-bordered container mx-auto w-max bg-base-100 shadow-xl'>
         <form
           className='card-body flex flex-col gap-5 mx-auto px-10 py-10'
           onSubmit={formHandler()}
