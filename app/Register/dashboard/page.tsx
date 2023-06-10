@@ -5,6 +5,7 @@ import Centers from './centers-table';
 import AddAccountForm from "./account-form";
 import AddCenterForm from "./center-form";
 import RegisterSummary from "./summary";
+import Registers from "./regist-table";
 
 export const metadata: Metadata = {
   title: 'Cục Đăng kiểm Việt Nam',
@@ -56,8 +57,12 @@ export default async function RegisterDashboarḍ̣̣̣() {
         {/* Quản lý đăng kiểm */}
         <div id="ManageReg" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
           <h2 className="font-bold text-3xl text-primary mx-10">Quản lý đăng kiểm</h2>
-          <div>
+          <div className="container my-5">
             <RegisterSummary />
+          </div>
+          <div className="container mt-16">
+            <h3 className="font-bold text-3xl text-accent my-5 mx-auto text-center">Bảng theo dõi Đăng kiểm</h3>
+            <Registers />
           </div>
         </div>
 
