@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default async function RegisterDashboarḍ̣̣̣() {
   return (
     <>
-      <div className='flex flex-col bg-white'>
+      <div className='flex flex-col bg-white text-black'>
         <div className='border-b z-50'>
           <MainNav />
         </div>

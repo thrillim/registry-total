@@ -1,7 +1,11 @@
-'use client';
-
+import { Metadata } from 'next';
 import SignInForm from './signin-form';
-import { metadata } from './signin-form';
+
+export const metadata: Metadata = {
+  title: 'Đăng nhập',
+  description:
+      'Đăng nhập vào hệ thống quản lý đăng kiểm',
+};
 
 export default function SignIn() {
   return (

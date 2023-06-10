@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <div className="w-full h-full min-h-screen max-w-full bg-white">
+        <div className="w-full h-full min-h-screen max-w-full bg-white text-black">
             <NavBar />
             {/* for screen smaller than 768px */}
             <div className="container lg:hidden 

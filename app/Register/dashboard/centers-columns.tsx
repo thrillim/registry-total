@@ -17,6 +17,7 @@ export const columns: ColumnDef<Center>[] = [
   {
     accessorKey: 'centerCode',
     header: 'Mã trung tâm',
+    maxSize: 100,
   },
   {
     accessorKey: 'centerName',
@@ -29,6 +30,8 @@ export const columns: ColumnDef<Center>[] = [
   {
     accessorKey: 'centerAddress',
     header: 'Địa chỉ',
+    size: 400,
+    minSize: 200,
   },
   {
     accessorKey: 'centerHotline',

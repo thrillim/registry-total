@@ -1,34 +1,27 @@
-import { Metadata } from "next"
-
+'use client'
 import React, { useRef, useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
-export const metadata: Metadata = {
-    title: 'Đăng nhập',
-    description:
-        'Đăng nhập vào hệ thống quản lý đăng kiểm',
-};
-
 export default function SignInForm() {
     const router = useRouter();
-    const username = useRef('');
-    const password = useRef('');
+    const usernameRef = useRef('');
+    const passwordRef = useRef('');
     const [showError, setShowError] = useState(false);
 
-    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    // const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-    function togglePasswordVisibility() {
-        setIsPasswordVisible((prevState) => !prevState);
-    }
+    // function togglePasswordVisibility() {
+    //     setIsPasswordVisible((isPasswordVisible) => !isPasswordVisible);
+    // }
 
 
     const onSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
 
         const result = await signIn('credentials', {
-            username: username.current,
-            password: password.current,
+            username: usernameRef.current,
+            password: passwordRef.current,
             redirect: false,
         });
         if (result != null) {
@@ -65,7 +58,7 @@ export default function SignInForm() {
                             autoComplete='username'
                             required
                             className='input input-bordered w-full max-w-xs text-black'
-                            onChange={(e) => (username.current = e.target.value)}
+                            onChange={(e) => (usernameRef.current = e.target.value)}
                         />
                     </div>
                     <div className='form-control w-full max-w-xs'>
@@ -74,14 +67,15 @@ export default function SignInForm() {
                         </label>
                         <div className='container flex flex-row'>
                             <input
-                                type={isPasswordVisible ? "text" : "password"}
+                                // type={isPasswordVisible ? "text" : "password"}
+                                type='password'
                                 placeholder='Mật khẩu'
-                                autoComplete='current-password'
+                                autoComplete='password'
                                 required
                                 className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (password.current = e.target.value)}
+                                onChange={(e) => (passwordRef.current = e.target.value)}
                             />
-                            <button
+                            {/* <button
                                 className="flex items-center px-4 text-gray-600"
                                 onClick={togglePasswordVisibility}
                             >
@@ -121,7 +115,7 @@ export default function SignInForm() {
                                         />
                                     </svg>
                                 )}
-                            </button>
+                            </button> */}
                         </div>
                         {showError && (
                             <label className='label'>
