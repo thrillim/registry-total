@@ -123,7 +123,6 @@ export default function AddAccountForm() {
                 ref={passwordRef}
                 required
                 className='input input-bordered w-full max-w-xs text-black'
-                end
               />
               <button
                 className="flex items-center px-4 text-gray-600"
