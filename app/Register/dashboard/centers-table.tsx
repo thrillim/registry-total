@@ -1,5 +1,5 @@
 'use client';
-import { Center, columns } from './columns';
+import { Center, columns } from './centers-columns';
 import { DataTable } from '@/app/components/shadcn-ui/data-table';
 import useSWR  from 'swr';
 
