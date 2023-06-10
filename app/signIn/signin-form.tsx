@@ -16,7 +16,7 @@ export default function SignInForm() {
     // }
 
 
-    const onSubmit = async (e: { preventDefault: () => void; }) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
 
         const result = await signIn('credentials', {
