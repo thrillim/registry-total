@@ -1,6 +1,7 @@
 'use client';
 
 import SignInForm from './signin-form';
+import { metadata } from './signin-form';
 
 export default function SignIn() {
   return (
