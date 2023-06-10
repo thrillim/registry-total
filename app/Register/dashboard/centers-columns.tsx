@@ -25,11 +25,11 @@ export const columns: ColumnDef<Center>[] = [
   },
   {
     accessorKey: 'centerProvince',
-    header: 'Tỉnh/Thành phố',
+    header: 'Tỉnh thành',
   },
   {
     accessorKey: 'centerAddress',
-    header: 'Địa chỉ',
+    header: 'Địa chỉ trung tâm',
     size: 400,
     minSize: 200,
   },
