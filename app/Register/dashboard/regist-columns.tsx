@@ -1,6 +1,7 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown } from "lucide-react";
 
 export type Register = {
     bienSo: string;
@@ -36,14 +37,44 @@ export const columns: ColumnDef<Register>[] = [
     },
     {
         accessorKey: 'statusCreatedAt',
-        header: 'Ngày đăng kiểm',
+        // header: 'Ngày đăng kiểm',
+        header: ({ column }) => {
+            return (
+              <div className="flex items-center hover:cursor-pointer"         
+                onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              >
+                Ngày đăng kiểm
+                <ArrowUpDown className="ml-2 h-4 w-4" />
+              </div>
+            )
+          },
     },
     {
         accessorKey: 'statusUpdatedAt',
-        header: 'Ngày cập nhật',
+        // header: 'Ngày cập nhật',
+        header: ({ column }) => {
+            return (
+              <div className="flex items-center hover:cursor-pointer"         
+                onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              >
+                Ngày cập nhật
+                <ArrowUpDown className="ml-2 h-4 w-4" />
+              </div>
+            )
+          },
     },
     {
         accessorKey: 'statusValidUntil',
-        header: 'Ngày hết hạn',
+        // header: 'Ngày hết hạn',
+        header: ({ column }) => {
+            return (
+              <div className="flex items-center hover:cursor-pointer"         
+                onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+              >
+                Ngày hết hạn
+                <ArrowUpDown className="ml-2 h-4 w-4" />
+              </div>
+            )
+          },
     },
 ];

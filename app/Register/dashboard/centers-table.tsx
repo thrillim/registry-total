@@ -20,6 +20,7 @@ export default function Centers() {
     <DataTable
       columns={columns}
       data={centers}
+      
     />
   );
 }

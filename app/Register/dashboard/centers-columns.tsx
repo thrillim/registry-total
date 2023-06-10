@@ -1,6 +1,8 @@
 "use client"
 
+import { Button } from "@/app/components/shadcn-ui/button";
 import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 
 export type Center = {
   centerCode: string;
@@ -16,7 +18,17 @@ export type Center = {
 export const columns: ColumnDef<Center>[] = [
   {
     accessorKey: 'centerCode',
-    header: 'Mã trung tâm',
+    // header: 'Mã trung tâm',
+    header: ({ column }) => {
+      return (
+        <div className="flex items-center hover:cursor-pointer"         
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Mã trung tâm
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </div>
+      )
+    },
     maxSize: 100,
   },
   {
@@ -26,6 +38,16 @@ export const columns: ColumnDef<Center>[] = [
   {
     accessorKey: 'centerProvince',
     header: 'Tỉnh thành',
+    // header: ({ column }) => {
+    //   return (
+    //     <div className="flex items-center hover:cursor-pointer"         
+    //       onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+    //     >
+    //       Tỉnh thành
+    //       <ArrowUpDown className="ml-2 h-4 w-4" />
+    //     </div>
+    //   )
+    // },
   },
   {
     accessorKey: 'centerAddress',
