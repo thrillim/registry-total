@@ -7,6 +7,7 @@
         "centerName": "Trung tâm 1",
         "centerProvince": "Hà Nội",
         "statusCreatedAt": "2020-01-01",
+        "statusUpdatedAt": "2020-01-01",
         "statusValidUntil": "2023-06-13"
     }
 ]

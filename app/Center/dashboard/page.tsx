@@ -4,6 +4,7 @@ import RegisterSummary from "./summary";
 import Registers from "./regist-table";
 import ExpiredCars from "./expired-table";
 import NextMonthPrediction from "./prediction";
+import Cars from "./cars-table";
 
 export const metadata: Metadata = {
     title: "Dashboard",
@@ -17,7 +18,7 @@ export default async function CenterDashboarḍ̣̣̣() {
                 <div className='border-b z-50'>
                     <MainNav />
                 </div>
-                <div id="ManageReg" className='flex-1 space-y-4 p-8 mt-3 bg-base-100 w-full'>
+                <div id="ManageReg" className='flex-1 space-y-4 p-8 mt-3 bg-base-100 w-full min-h-screen'>
                     <h2 className='font-bold text-3xl text-primary mx-10'>
                         Quản lý đăng kiểm
                     </h2>
@@ -34,6 +35,18 @@ export default async function CenterDashboarḍ̣̣̣() {
                             <ExpiredCars />
                             <NextMonthPrediction />
                         </div>
+                    </div>
+                </div>
+
+                <div className="divider"></div>
+
+                <div id="ManageCars" className='flex-1 space-y-4 p-8 mt-3 bg-base-100 w-full  min-h-screen'>
+                    <h2 className='font-bold text-3xl text-primary mx-10'>
+                        Quản lý ô tô
+                    </h2>
+                    <div className="container max-w-[90%] mx-auto">
+                        <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Bảng theo dõi ô tô</h3>
+                        <Cars />
                     </div>
                 </div>
             </div>
