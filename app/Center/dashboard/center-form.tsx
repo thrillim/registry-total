@@ -169,7 +169,7 @@ export default function CenterInfo() {
                                 data.state = state.current;
                                 alert('Cập nhật thành công');
                             }
-                        }}>Thêm mới</button>
+                        }}>Cập nhật</button>
                     </div>
                 </form>
 
