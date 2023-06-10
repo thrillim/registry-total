@@ -29,10 +29,8 @@ export default function MainNav({
                     <ul tabIndex={0} className="dropdown-content menu
                     p-2 glass shadow bg-base-100 rounded-box w-max 
                     text-black text-md font-semibold">
-                        <li><a href="#Center">Trung tâm đăng kiểm</a></li>
-                        <li><a href="#AddAccount">Cấp tài khoản </a></li>
                         <li><a href="#ManageReg">Quản lý đăng kiểm </a></li>
-                        <li><a href="#ManageCars">Quản lý ô tô </a></li>
+                        <li><a href="#ManageCars">Quản lý ô tô</a></li>
                     </ul>
                 </div>
                 <a className='btn btn-ghost normal-case text-xl text-accent gap-2'>
@@ -41,9 +39,10 @@ export default function MainNav({
                 </a>
             </div>
             <div className="navbar-center">
-                <h1 className="max-md:hidden text-2xl font-bold text-primary">Cục Đăng kiểm Việt Nam</h1>
+                <h1 className="max-md:hidden text-2xl font-bold text-primary">Trung tâm đăng kiểm</h1>
             </div>
             <div className="navbar-end">
+                <div className="btn btn-outline btn-accent btn-sm mx-2"><a href="http://localhost:3000/Center/account">Tài khoản</a></div>
                 <div className="btn btn-error btn-sm mx-2">Đăng xuất</div>
             </div>
         </nav>
