@@ -172,22 +172,9 @@ export default function AddAccountForm() {
           </div>
           <div className='flex flex-row gap-4 mx-auto mb-4'>
             <button
-            type='reset'
+              type='reset'
               className='btn btn-outline btn-neutral'
-              onClick={() => {
-                // reset form
-                if (centerCode != undefined && centerCode) {
-                  setCenterCode(centers[0][1]); 
-                }
 
-                if (usernameRef.current != undefined && usernameRef.current) {
-                  usernameRef.current.value = '';
-                }
-
-                if (passwordRef.current != undefined && passwordRef.current) {
-                  passwordRef.current.value = '';
-                }
-              }}
             >
               Hủy bỏ
             </button>
