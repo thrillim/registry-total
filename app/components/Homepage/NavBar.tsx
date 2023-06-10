@@ -27,7 +27,9 @@ export default function NavBar() {
           </label>
           <ul
             tabIndex={0}
-            className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52'
+            className='dropdown-content menu
+            p-2 glass shadow-lg bg-base-100 rounded-box w-max 
+            text-black text-md font-semibold'
           >
             <li>
               <a>Tin tức</a>
