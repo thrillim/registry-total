@@ -71,7 +71,7 @@ model RegistCenter {
   centerAddress  String?
   centerEmail    String
   centerManager  String?
-  centerCode     String
+  centerCode     String         @unique
   centerStatus   Boolean        @default(true)
   centerProvince String
   Account        Account[]
