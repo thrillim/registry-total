@@ -121,12 +121,12 @@ export default function AddAccountForm() {
               />
             </div>
             <div className='flex flex-row gap-4 mx-auto mb-4'>
-              <div
+              <button
                 className='btn btn-outline btn-neutral'
-                onClick={() => {}}
+                type='reset'
               >
                 Hủy bỏ
-              </div>
+              </button>
               <button
                 type='submit'
                 className='btn btn-primary'

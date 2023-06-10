@@ -84,11 +84,11 @@ model RegistStatus {
   carId            Int
   status           String
   statusCreatedAt  DateTime     @default(now())
-  statusUpdatedAt  DateTime     @updatedAt
+  statusUpdatedAt  DateTime?    @updatedAt
   statusNote       String?
-  statusValidUntil DateTime?
+  statusValidUntil DateTime
   RegistCenter     RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
-  statusCar        Car          @relation(fields: [carId], references: [carId])
+  CarInfo          Car          @relation(fields: [carId], references: [carId])
 
   @@index([RegistCenterId], map: "RegistStatus_RegistCenterId_fkey")
   @@index([carId], map: "RegistStatus_carId_fkey")
@@ -99,10 +99,9 @@ model Account {
   accId                Int          @id @default(autoincrement())
   accPassword          String
   accRole              String
-  accStatus            String       @default("Invalidate")
+  accStatus            String       @default("Unverified")
   accUsername          String       @unique
   accVerifiedAt        DateTime?
-  accVerifiedByAccount Int?
   accTemptPassword     String?
   RegistCenter         RegistCenter @relation(fields: [RegistCenterId], references: [centerId])
 
