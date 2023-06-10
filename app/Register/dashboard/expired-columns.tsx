@@ -27,7 +27,7 @@ export const columns: ColumnDef<ExpiredCars>[] = [
     },
     {
         accessorKey: 'centerProvince',
-        header: 'Tỉnh/Thành phố',
+        header: 'Tỉnh thành',
     },
     {
         accessorKey: 'status',

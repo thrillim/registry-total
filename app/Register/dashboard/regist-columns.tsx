@@ -28,7 +28,7 @@ export const columns: ColumnDef<Register>[] = [
     },
     {
         accessorKey: 'centerProvince',
-        header: 'Tỉnh/Thành phố',
+        header: 'Tỉnh thành',
     },
     {
         accessorKey: 'status',
