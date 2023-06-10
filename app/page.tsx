@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className='bg-white min-w-fit'>
+    <div className='bg-white max-w-screen min-w-[400px]'>
       <Homepage />
       <div className="divider"></div> 
       <About />

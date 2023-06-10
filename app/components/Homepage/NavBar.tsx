@@ -3,7 +3,7 @@ import Logo from '../Logo/logo';
 
 export default function NavBar() {
   return (
-    <div className='navbar bg-base-100 shadow-md z-50'>
+    <div className='navbar bg-base-100 shadow-md z-50 px-3'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label
@@ -27,7 +27,9 @@ export default function NavBar() {
           </label>
           <ul
             tabIndex={0}
-            className='menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52'
+            className='dropdown-content menu
+            p-2 glass shadow-lg bg-base-100 rounded-box w-max 
+            text-black text-md font-semibold'
           >
             <li>
               <a>Tin tức</a>
