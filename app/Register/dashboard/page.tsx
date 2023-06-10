@@ -7,6 +7,7 @@ import RegisterSummary from "./summary";
 import Registers from "./regist-table";
 import ExpiredCars from "./expired-table";
 import NextMonthPrediction from "./prediction";
+import Cars from "./cars-table";
 
 export const metadata: Metadata = {
   title: 'Cục Đăng kiểm Việt Nam',
@@ -61,9 +62,14 @@ export default async function RegisterDashboarḍ̣̣̣() {
           <div className="container my-5">
             <RegisterSummary />
           </div>
-          <div className="container mt-16">
+          <div className="container mt-16 max-w-[95%] mx-auto">
             <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Bảng theo dõi Đăng kiểm</h3>
             <Registers />
+          </div>
+          <div className="container mt-16 max-w-[95%] mx-auto">
+            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe đã và sắp hết hạn đăng kiểm</h3>
+            <ExpiredCars />
+            <NextMonthPrediction />
           </div>
         </div>
 
@@ -72,10 +78,8 @@ export default async function RegisterDashboarḍ̣̣̣() {
         {/* Quản lý ô tô*/}
         <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
           <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
-          <div className="container mt-16">
-            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe đã và sắp hết hạn đăng kiểm</h3>
-            <ExpiredCars />
-            <NextMonthPrediction />
+          <div className="container mt-16 max-w-[85%] mx-auto">
+            <Cars />
           </div>
         </div>
       </div>
