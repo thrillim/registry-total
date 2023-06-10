@@ -23,145 +23,148 @@ export default function AddCenterForm() {
     return (
         <>
             <div className='card container mx-auto w-max bg-base-100 shadow-xl'>
-                <form action="" className='card-body flex flex-row gap-20 mx-auto px-10 py-10'>
-                    <div className='flex flex-col gap-3'>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>
-                                    Mã trung tâm
-                                </span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
-                            <input
-                                type='text'
-                                placeholder='Mã trung tâm'
-                                autoComplete='username'
-                                required
-                                minLength={4}
-                                maxLength={10}
-                                className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (centerCode.current = e.target.value)}
-                            />
+                <form action="" className='card-body mx-auto px-10 py-10'>
+                    <div className='container flex flex-row gap-20'>
+                        <div className='flex flex-col gap-3'>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>
+                                        Mã trung tâm
+                                    </span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
+                                <input
+                                    type='text'
+                                    placeholder='Mã trung tâm'
+                                    autoComplete='username'
+                                    required
+                                    minLength={4}
+                                    maxLength={10}
+                                    className='input input-bordered w-full max-w-xs text-black'
+                                    onChange={(e) => (centerCode.current = e.target.value)}
+                                />
+                            </div>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>Tên trung tâm</span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
+                                <input
+                                    type='text'
+                                    placeholder='Tên trung tâm'
+                                    autoComplete='organization'
+                                    required
+                                    minLength={6}
+                                    className='input input-bordered w-full max-w-xs text-black'
+                                    onChange={(e) => (centerName.current = e.target.value)}
+                                />
+                            </div>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>Số điện thoại</span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
+                                <input
+                                    type='text'
+                                    placeholder='Hotline'
+                                    autoComplete='phone'
+                                    required
+                                    pattern='[0-9]{8,12}'
+                                    className='input input-bordered w-full max-w-xs text-black'
+                                    onChange={(e) => (hotline.current = e.target.value)}
+                                />
+                            </div>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>Email</span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
+                                <input
+                                    type='email'
+                                    placeholder='Email'
+                                    autoComplete='email'
+                                    required
+                                    pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+                                    className='input input-bordered w-full max-w-xs text-black'
+                                    onChange={(e) => (email.current = e.target.value)}
+                                />
+                            </div>
                         </div>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>Tên trung tâm</span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
-                            <input
-                                type='text'
-                                placeholder='Tên trung tâm'
-                                autoComplete='organization'
-                                required
-                                minLength={6}
-                                className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (centerName.current = e.target.value)}
-                            />
-                        </div>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>Số điện thoại</span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
-                            <input
-                                type='text'
-                                placeholder='Hotline'
-                                autoComplete='phone'
-                                required
-                                pattern='[0-9]{8,12}'
-                                className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (hotline.current = e.target.value)}
-                            />
-                        </div>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>Email</span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
-                            <input
-                                type='email'
-                                placeholder='Email'
-                                autoComplete='email'
-                                required
-                                pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
-                                className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (email.current = e.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className='flex flex-col gap-3'>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>
-                                    Tỉnh/Thành phố
-                                </span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
+                        <div className='flex flex-col gap-3'>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>
+                                        Tỉnh/Thành phố
+                                    </span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
 
-                            <select name="city" id="center-city"
-                                required
-                                className='select select-bordered'
-                                onChange={(e) => centerProvince.current = e.target.value}
-                                defaultValue={'DEFAULT'} >
-                                <option key={"none"} value={'DEFAULT'} disabled className='text-gray-700 font-light'>Chọn tỉnh/thành phố</option>
-                                {provinces.map((province) => (
-                                    <option key={province} value={province}>{province}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>Địa chỉ</span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
-                            <input
-                                type='text'
-                                placeholder='Địa chỉ'
-                                autoComplete='address'
-                                required
-                                className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (address.current = e.target.value)}
-                            />
-                        </div>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>Quản lý</span>
-                            </label>
-                            <input
-                                type='text'
-                                placeholder='Tên nhân viên quản lý'
-                                autoComplete='name'
-                                autoCapitalize='true'
-                                className='input input-bordered w-full max-w-xs text-black'
-                                onChange={(e) => (manager.current = e.target.value)}
-                            />
-                        </div>
-                        <div className='form-control w-full max-w-xs'>
-                            <label className='label'>
-                                <span className='label-text font-bold text-lg'>Trạng thái hoạt động</span>
-                                <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
-                            </label>
-                            <select name="status" id="status"
-                                className='select select-bordered'
-                                onChange={(e) => (state.current = e.target.value)}
-                                defaultValue={'DEFAULT'}>
-                                <option key={"none"} value={'DEFAULT'} disabled className='text-gray-700 font-light'>Chọn trạng thái</option>
-                                <option key="active" value="Hoạt động">Hoạt động</option>
-                                <option key="inactive" value="Đóng cửa">Đóng cửa</option>
-                            </select>
+                                <select name="city" id="center-city"
+                                    required
+                                    className='select select-bordered'
+                                    onChange={(e) => centerProvince.current = e.target.value}
+                                    defaultValue={'DEFAULT'} >
+                                    <option key={"none"} value={'DEFAULT'} disabled className='text-gray-700 font-light'>Chọn tỉnh/thành phố</option>
+                                    {provinces.map((province) => (
+                                        <option key={province} value={province}>{province}</option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>Địa chỉ</span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
+                                <input
+                                    type='text'
+                                    placeholder='Địa chỉ'
+                                    autoComplete='address'
+                                    required
+                                    className='input input-bordered w-full max-w-xs text-black'
+                                    onChange={(e) => (address.current = e.target.value)}
+                                />
+                            </div>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>Quản lý</span>
+                                </label>
+                                <input
+                                    type='text'
+                                    placeholder='Tên nhân viên quản lý'
+                                    autoComplete='name'
+                                    autoCapitalize='true'
+                                    className='input input-bordered w-full max-w-xs text-black'
+                                    onChange={(e) => (manager.current = e.target.value)}
+                                />
+                            </div>
+                            <div className='form-control w-full max-w-xs'>
+                                <label className='label'>
+                                    <span className='label-text font-bold text-lg'>Trạng thái hoạt động</span>
+                                    <span className="label-text-alt text-red-700 text-lg font-bold">*</span>
+                                </label>
+                                <select name="status" id="status"
+                                    className='select select-bordered'
+                                    onChange={(e) => (state.current = e.target.value)}
+                                    defaultValue={'DEFAULT'}>
+                                    <option key={"none"} value={'DEFAULT'} disabled className='text-gray-700 font-light'>Chọn trạng thái</option>
+                                    <option key="active" value="Hoạt động">Hoạt động</option>
+                                    <option key="inactive" value="Đóng cửa">Đóng cửa</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </form>
-                    <div className='flex flex-row gap-4 mx-auto mb-4'>
-                        <div className='btn btn-outline btn-neutral'>Hủy bỏ</div>
-                        <div className='btn btn-primary' onClick={() => {
+                    <div className='flex flex-row gap-4 mx-auto my-4'>
+                        <button className='btn btn-outline btn-neutral' type='reset'>Hủy bỏ</button>
+                        <button className='btn btn-primary' type='submit' onClick={() => {
                             if (centerCode.current === '' || centerName.current === '' || hotline.current === '' || email.current === '' || centerProvince.current === '' || address.current === '' || state.current === '') {
                                 setShowError(true);
                             } else {
                                 setShowError(false);
                             }
-                        }}>Thêm mới</div>
+                        }}>Thêm mới</button>
                     </div>
+                </form>
+
             </div>
         </>
     )
