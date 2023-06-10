@@ -15,8 +15,6 @@ for (let i = 0; i < stations.stations.length; i++) {
 
 centers.shift();
 
-
-
 export default function AddAccountForm() {
   const [centerCode, setCenterCode] = useState(centers[0][1]);
   const usernameRef = useRef();
@@ -29,6 +27,7 @@ export default function AddAccountForm() {
     setIsPasswordVisible((prevState) => !prevState);
   }
 
+  // const [passwordState, setPasswordState] = useState('');
 
   const formHandler = useCallback(
     () => (event) => {
@@ -172,12 +171,26 @@ export default function AddAccountForm() {
             </div>
           </div>
           <div className='flex flex-row gap-4 mx-auto mb-4'>
-            <div
+            <button
+            type='reset'
               className='btn btn-outline btn-neutral'
-              onClick={() => { }}
+              onClick={() => {
+                // reset form
+                if (centerCode != undefined && centerCode) {
+                  setCenterCode(centers[0][1]); 
+                }
+
+                if (usernameRef.current != undefined && usernameRef.current) {
+                  usernameRef.current.value = '';
+                }
+
+                if (passwordRef.current != undefined && passwordRef.current) {
+                  passwordRef.current.value = '';
+                }
+              }}
             >
               Hủy bỏ
-            </div>
+            </button>
             <button
               type='submit'
               className='btn btn-primary'

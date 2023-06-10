@@ -27,46 +27,46 @@ export default async function RegisterDashboarḍ̣̣̣() {
             <Centers />
           </div>
           <div className='my-5 ml-10 btn btn-primary'>
-            <a href='#'>Thêm mới</a>
+            <a href='#AddCenter'>Thêm mới</a>
           </div>
         </div>
 
         <div className="divider "></div>
 
-                {/* Them moi trung tam */}
-                <div id="AddCenter" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
-                    <h2 className="font-bold text-3xl text-primary mx-10">Thêm Trung tâm đăng kiểm</h2>
-                    <div className="container mx-auto py-10 text-black">
-                        <AddCenterForm />
-                    </div>
-                </div>
+        {/* Them moi trung tam */}
+        <div id="AddCenter" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
+          <h2 className="font-bold text-3xl text-primary mx-10">Thêm Trung tâm đăng kiểm</h2>
+          <div className="container mx-auto py-10 text-black">
+            <AddCenterForm />
+          </div>
+        </div>
 
-                <div className="divider"></div>
+        <div className="divider"></div>
 
-                {/* Cấp tài khoản cho trung tâm đăng kiểm */}
-                <div id="AddAccount" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
-                    <h2 className="font-bold text-3xl text-primary mx-10">Cấp tài khoản</h2>
-                    <div className="container mx-auto py-10 text-black">
-                        <AddAccountForm />
-                    </div>
-                </div>
+        {/* Cấp tài khoản cho trung tâm đăng kiểm */}
+        <div id="AddAccount" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
+          <h2 className="font-bold text-3xl text-primary mx-10">Cấp tài khoản</h2>
+          <div className="container mx-auto py-10 text-black">
+            <AddAccountForm />
+          </div>
+        </div>
 
-                <div className="divider"></div>
+        <div className="divider"></div>
 
-                {/* Quản lý đăng kiểm */}
-                <div id="ManageReg" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
-                    <h2 className="font-bold text-3xl text-primary mx-10">Quản lý đăng kiểm</h2>
-                    <div>
-                        <RegisterSummary />
-                    </div>
-                </div>
+        {/* Quản lý đăng kiểm */}
+        <div id="ManageReg" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
+          <h2 className="font-bold text-3xl text-primary mx-10">Quản lý đăng kiểm</h2>
+          <div>
+            <RegisterSummary />
+          </div>
+        </div>
 
-                <div className="divider"></div>
+        <div className="divider"></div>
 
-                {/* Quản lý ô tô*/}
-                <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
-                    <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
-                </div>
+        {/* Quản lý ô tô*/}
+        <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
+          <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
+        </div>
       </div>
     </>
   );
