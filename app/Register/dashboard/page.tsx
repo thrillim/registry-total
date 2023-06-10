@@ -6,6 +6,7 @@ import AddCenterForm from "./center-form";
 import RegisterSummary from "./summary";
 import Registers from "./regist-table";
 import ExpiredCars from "./expired-table";
+import NextMonthPrediction from "./prediction";
 
 export const metadata: Metadata = {
   title: 'Cục Đăng kiểm Việt Nam',
@@ -74,6 +75,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
           <div className="container mt-16">
             <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe đã và sắp hết hạn đăng kiểm</h3>
             <ExpiredCars />
+            <NextMonthPrediction />
           </div>
         </div>
       </div>
