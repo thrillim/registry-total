@@ -14,8 +14,8 @@ export default function Centers() {
     'http://localhost:3000/RegistCenter.json',
     fetcher
   );
-  if (error) return 'An error has occurred.';
-  if (isLoading) return 'Loading centers...';
+  if (error) return 'Có lỗi xảy ra khi tải thông tin';
+  if (isLoading) return 'Đang tải thông tin....';
   return (
     <DataTable
       columns={columns}

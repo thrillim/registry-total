@@ -28,7 +28,7 @@ export default function CenterInfo() {
                 <form action="" className='card-body mx-auto px-10 py-7'>
                     <div className='container flex flex-row gap-20'>
                         <div className='flex flex-col gap-3'>
-                            <div className='form-control w-full max-w-xs'>
+                            <div className='form-control w-full'>
                                 <label className='label'>
                                     <span className='label-text font-bold text-lg'>
                                         Mã trung tâm
@@ -40,7 +40,6 @@ export default function CenterInfo() {
                                     placeholder='Mã trung tâm'
                                     autoComplete='username'
                                     value={data.centerCode}
-                                    required
                                     readOnly
                                     className='input input-bordered w-full max-w-xs text-black'
                                 />
@@ -55,7 +54,6 @@ export default function CenterInfo() {
                                     placeholder='Tên trung tâm'
                                     autoComplete='organization'
                                     value={data.centerName}
-                                    required
                                     readOnly
                                     className='input input-bordered w-full max-w-xs text-black'
                                 />
@@ -103,7 +101,6 @@ export default function CenterInfo() {
                                 </label>
 
                                 <input name="city"
-                                    required
                                     className='input input-bordered w-full max-w-xs text-black'
                                     value={data.centerProvince}
                                     readOnly

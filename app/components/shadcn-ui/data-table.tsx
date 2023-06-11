@@ -110,6 +110,40 @@ export function DataTable<TData, TValue>({
           ) : (
             <></>
           )}
+          {table.getColumn('loai') ? (
+            <Input
+              placeholder='Tìm theo loại xe...'
+              value={
+                (table.getColumn('loai')?.getFilterValue() as string) ??
+                ''
+              }
+              onChange={(event) =>
+                table
+                  .getColumn('loai')
+                  ?.setFilterValue(event.target.value)
+              }
+              className='max-w-sm'
+            />
+          ) : (
+            <></>
+          )}
+          {table.getColumn('nhanHieu') ? (
+            <Input
+              placeholder='Tìm theo hãng sản xuất...'
+              value={
+                (table.getColumn('nhanHieu')?.getFilterValue() as string) ??
+                ''
+              }
+              onChange={(event) =>
+                table
+                  .getColumn('nhanHieu')
+                  ?.setFilterValue(event.target.value)
+              }
+              className='max-w-sm'
+            />
+          ) : (
+            <></>
+          )}
         </div>
       ) : (
         <></>
@@ -154,7 +188,7 @@ export function DataTable<TData, TValue>({
                 colSpan={columns.length}
                 className='h-24 text-center'
               >
-                No results.
+                Không tìm thấy kết quả nào.
               </TableCell>
             </TableRow>
           )}

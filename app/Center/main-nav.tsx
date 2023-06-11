@@ -29,8 +29,23 @@ export default function MainNav({
                     <ul tabIndex={0} className="dropdown-content menu
                     p-2 glass shadow bg-base-100 rounded-box w-max 
                     text-black text-md font-semibold">
-                        <li><a href="#ManageReg">Quản lý đăng kiểm </a></li>
-                        <li><a href="#ManageCars">Quản lý ô tô</a></li>
+                        <li><a href="/Center/dashboard#ManageReg">Quản lý đăng kiểm </a></li>
+                        <li><a href="/Center/dashboard#ManageCars">Quản lý ô tô</a></li>
+                        <li>
+                            <details>
+                                <summary>
+                                    <a href="/Center/registry">Đăng kiểm xe</a>
+                                </summary>
+                                <ul>
+                                    <li><a href="/Center/registry">Kiểm tra nhận dạng tổng quát</a></li>
+                                    <li><a href="/Center/registry">Kiểm tra phần trên của phương tiện</a></li>
+                                    <li><a href="/Center/registry">Kiểm tra hiệu quả phanh và trượt ngang</a></li>
+                                    <li><a href="/Center/registry">Kiểm tra môi trường</a></li>                                    
+                                    <li><a href="/Center/registry">Kiểm tra phần dưới của phương tiện</a></li>
+                                </ul>
+                            </details>
+                            
+                        </li>
                     </ul>
                 </div>
                 <a className='btn btn-ghost normal-case text-xl text-accent gap-2'>
@@ -42,7 +57,7 @@ export default function MainNav({
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Trung tâm đăng kiểm</h1>
             </div>
             <div className="navbar-end">
-                <div className="btn btn-outline btn-accent btn-sm mx-2"><a href="http://localhost:3000/Center/account">Tài khoản</a></div>
+                <div className="btn btn-outline btn-accent btn-sm mx-2"><a href="/Center/account">Tài khoản</a></div>
                 <div className="btn btn-error btn-sm mx-2">Đăng xuất</div>
             </div>
         </nav>

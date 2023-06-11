@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import MainNav from "./main-nav";
+import MainNav from "../main-nav";
 import RegisterSummary from "./summary";
 import Registers from "./regist-table";
 import ExpiredCars from "./expired-table";
