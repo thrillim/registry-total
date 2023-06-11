@@ -6,12 +6,12 @@ import useSWR  from 'swr';
 const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
 export default function Centers() {
-  // const data = await fetch('http://localhost:3000/api/getCenters');
-  // const centers: Center[] = await data.json();
-  // console.log('Love you');
-  // console.log(centers);
+  // const { data: centers, error, isLoading } = useSWR(
+  //   'http://localhost:3000/RegistCenter.json',
+  //   fetcher
+  // );
   const { data: centers, error, isLoading } = useSWR(
-    'http://localhost:3000/RegistCenter.json',
+    'http://localhost:3000/api/getCenters',
     fetcher
   );
   if (error) return 'An error has occurred.';
@@ -20,7 +20,6 @@ export default function Centers() {
     <DataTable
       columns={columns}
       data={centers}
-      
     />
   );
 }

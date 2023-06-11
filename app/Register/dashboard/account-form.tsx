@@ -20,6 +20,8 @@ export default function AddAccountForm() {
   const usernameRef = useRef();
   const passwordRef = useRef();
   const [showError, setShowError] = useState(false);
+  const [createError, setCreateError] = useState(false);
+  const [createSuccess, setCreateSuccess] = useState(false);
 
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -31,16 +33,43 @@ export default function AddAccountForm() {
     () => (event: { preventDefault: () => void; }) => {
       event.preventDefault();
 
-      const data = {
-        centerCode: centerCode,
-        username: usernameRef.current?.value,
-        password: passwordRef.current?.value,
-        // passwordConfirmation: passwordConfirmationInputElement.current?.value
-      };
+      // const data = {
+      //   centerCode: centerCode,
+      //   username: usernameRef.current?.value,
+      //   password: passwordRef.current?.value,
+      //   // passwordConfirmation: passwordConfirmationInputElement.current?.value
+      // };
 
-      console.log(data);
+      // console.log(data);
       // other send form logic here
-      // ...
+      if (!usernameRef.current || !passwordRef.current || !centerCode) {
+        setShowError(true);
+        return false;
+      } else {
+        const data = fetch('/api/signup', {
+          method: 'POST',
+          body: JSON.stringify({
+            accUsername: usernameRef.current?.value,
+            accPassword: passwordRef.current?.value,
+            accRole: 'User',
+            accStatus: 'Unverified',
+            RegistCenterCode: centerCode,
+          }),
+          headers: new Headers({
+            'Content-Type': 'application/json',
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (!data.accId) {
+              setCreateError(true);
+              setCreateSuccess(false);
+            } else {
+              setCreateSuccess(true);
+              setCreateError(false);
+            }
+          });
+      }
     },
     []
   );

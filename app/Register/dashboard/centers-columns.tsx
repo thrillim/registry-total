@@ -18,13 +18,12 @@ export type Center = {
 export const columns: ColumnDef<Center>[] = [
   {
     accessorKey: 'centerCode',
-    // header: 'Mã trung tâm',
     header: ({ column }) => {
       return (
         <div className="flex items-center hover:cursor-pointer"         
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Mã trung tâm
+          Mã số
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </div>
       )
@@ -65,7 +64,16 @@ export const columns: ColumnDef<Center>[] = [
   },
   {
     accessorKey: 'centerStatus',
-    header: 'Trạng thái',
+    header: ({ column }) => {
+      return (
+        <div className="flex items-center hover:cursor-pointer"         
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Trạng thái
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </div>
+      )
+    },
   },
   {
     accessorKey: 'centerManager',
