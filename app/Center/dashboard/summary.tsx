@@ -2,7 +2,7 @@
 
 export default function RegisterSummary() {
     return (<>
-        <div className="card w-full shadow-lg text-black pt-5 mt-7 card-bordered min-w-max">
+        <div className="card w-full shadow-lg text-black pt-5 mt-4 card-bordered min-w-max max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold text-accent mx-auto card-title">Tổng quan</h2>
             <div className="container flex flex-row w-full gap-5 card-body">
                 <div className="w-1/3 card card-bordered flex flex-col py-5 border-4  min-w-max">
