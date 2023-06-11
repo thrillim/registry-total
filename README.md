@@ -1,3 +1,37 @@
+# Bài tập lớn môn Phát triển ứng dụng Web
+
+## Lớp môn học: INT3306 20
+- Giảng viên lý thuyết: **TS. Lê Đình Thanh**
+- Giảng viên thực hành: **CN. Nguyễn Thị Thu Trang**
+
+## Thành viên:
+1. **Lê Hoàng Minh Hà**: 21020621
+2. **Hoàng Thị Thu Hà**: 21020189
+
+## Về dự án Registry Total
+**Registry Total**là ứng dụng web được phát triển nhằm hỗ trợ Cục đăng kiểm và các Trung tâm đăng kiểm trên toàn quốc quản lý đăng kiểm đối với xe ô tô.
+
+### Công nghệ sử dụng trong dự án:
+-  [Next.js](https://nextjs.org/): Framework
+-  [next-auth.js](https://nextjs.org/)
+-  [Typescript](https://www.typescriptlang.org/): ngôn ngữ lập trình
+-  [tailwindcss](https://tailwindcss.com/): framework CSS ưu tiện tiện ích, giúp cài đặt định dạng qua tên lớp của đối tượng HTML.
+-  [Prisma](https://www.prisma.io/): 
+-  [MySQL](https://www.mysql.com/): cơ sở dữ liệu.
+
+### Cấu trúc thư mục
+
+### Tính năng đã cài đặt
+#### Đối với cục Đăng kiểm
+
+#### Đối với Trung tâm đăng kiểm
+
+
+
+
+
+___________
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
