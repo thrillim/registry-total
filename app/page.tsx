@@ -13,7 +13,10 @@ export default function Home() {
     <div className='bg-white max-w-screen min-w-[400px]'>
       <Homepage />
       <div className="divider"></div> 
-      <About />
+      <div id='about'>
+        <About />
+      </div>
+      
     </div>
   );
 }

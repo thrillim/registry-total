@@ -38,7 +38,7 @@ export default function NavBar() {
               <a>Hướng dẫn</a>
             </li>
             <li>
-              <a>Giới thiệu</a>
+              <a href='#about'>Giới thiệu</a>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@ export default function NavBar() {
             <a>Hướng dẫn</a>
           </li>
           <li>
-            <a>Giới thiệu</a>
+            <a href='#about'>Giới thiệu</a>
           </li>
         </ul>
       </div>
