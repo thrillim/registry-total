@@ -7,16 +7,24 @@ import useSWR  from 'swr';
 const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
 export default function Cars() {
-  // const data = await fetch('http://localhost:3000/api/getCenters');
-  // const centers: Center[] = await data.json();
-  // console.log(centers);
+  // const { data: cars, error, isLoading } = useSWR(
+  //   'http://localhost:3000/Cars.json',
+  //   fetcher
+  // );
   const { data: cars, error, isLoading } = useSWR(
-    'http://localhost:3000/Cars.json',
+    'http://localhost:3000/api/getNewCars',
     fetcher
   );
   if (error) return 'An error has occurred.';
   if (isLoading) return 'Loading centers...';
 
+  if (cars.length > 0) {
+    // add ownerName and ownerAddress to car
+    cars.forEach((car)=>{
+      car.ownerName = car.owner.ownerName;
+      car.ownerAddress = car.owner.ownerAddress;
+    })
+  }
 
   return (
     <DataTable
