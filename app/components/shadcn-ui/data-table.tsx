@@ -2,6 +2,8 @@
 
 import * as React from "react"
 
+import { Input } from './input';
+
 import {
   ColumnDef,
   SortingState,
@@ -9,7 +11,9 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
-} from "@tanstack/react-table"
+  ColumnFiltersState,
+  getFilteredRowModel,
+} from '@tanstack/react-table';
 
 import {
   Table,
@@ -18,32 +22,100 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./table"
+} from './table';
 
 interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+  columns: ColumnDef<TData, TValue>[];
+  data: TData[];
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    []
+  );
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
+    onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
+
     state: {
       sorting,
+      columnFilters,
     },
-  })
+  });
 
   return (
-    <div className="rounded-md border">
-      <Table className="table compact">
+    <div className='rounded-md border'>
+      {table.getColumn('centerCode') ||
+      table.getColumn('centerProvince') ||
+      table.getColumn('ownerAddress') ? (
+        <div className='flex items-center p-4 gap-2'>
+          {table.getColumn('centerCode') ? (
+            <Input
+              placeholder='Tìm theo mã trung tâm...'
+              value={
+                (table.getColumn('centerCode')?.getFilterValue() as string) ??
+                ''
+              }
+              onChange={(event) =>
+                table
+                  .getColumn('centerCode')
+                  ?.setFilterValue(event.target.value)
+              }
+              className='max-w-sm'
+            />
+          ) : (
+            <></>
+          )}
+          {table.getColumn('centerProvince') ? (
+            <Input
+              placeholder='Tìm theo khu vực...'
+              value={
+                (table.getColumn('centerProvince')?.getFilterValue() as string) ??
+                ''
+              }
+              onChange={(event) =>
+                table
+                  .getColumn('centerProvince')
+                  ?.setFilterValue(event.target.value)
+              }
+              className='max-w-sm'
+            />
+          ) : (
+            <></>
+          )}
+          {table.getColumn('ownerAddress') ? (
+            <Input
+              placeholder='Tìm theo khu vực...'
+              value={
+                (table.getColumn('ownerAddress')?.getFilterValue() as string) ??
+                ''
+              }
+              onChange={(event) =>
+                table
+                  .getColumn('ownerAddress')
+                  ?.setFilterValue(event.target.value)
+              }
+              className='max-w-sm'
+            />
+          ) : (
+            <></>
+          )}
+        </div>
+      ) : (
+        <></>
+      )}
+
+      <Table className='table compact'>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
@@ -57,7 +129,7 @@ export function DataTable<TData, TValue>({
                           header.getContext()
                         )}
                   </TableHead>
-                )
+                );
               })}
             </TableRow>
           ))}
@@ -67,7 +139,7 @@ export function DataTable<TData, TValue>({
             table.getRowModel().rows.map((row) => (
               <TableRow
                 key={row.id}
-                data-state={row.getIsSelected() && "selected"}
+                data-state={row.getIsSelected() && 'selected'}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
@@ -78,7 +150,10 @@ export function DataTable<TData, TValue>({
             ))
           ) : (
             <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
+              <TableCell
+                colSpan={columns.length}
+                className='h-24 text-center'
+              >
                 No results.
               </TableCell>
             </TableRow>
@@ -86,5 +161,5 @@ export function DataTable<TData, TValue>({
         </TableBody>
       </Table>
     </div>
-  )
+  );
 }
