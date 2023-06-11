@@ -14,7 +14,7 @@ export default function Home() {
             {/* for screen smaller than 768px */}
             <div className="container lg:hidden 
                 mx-auto h-[80vh] mt-10 text-center 
-                flex flex-col gap-5">
+                flex flex-col gap-5 lg:px-3">
                 <div className="text-primary uppercase">
                     <div className="font-extrabold
                         md:text-7xl md:my-5

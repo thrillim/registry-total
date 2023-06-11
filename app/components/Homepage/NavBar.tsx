@@ -3,7 +3,7 @@ import Logo from '../Logo/logo';
 
 export default function NavBar() {
   return (
-    <div className='navbar bg-base-100 shadow-md z-50 px-3'>
+    <div className='navbar bg-base-100 shadow-md z-50 px-3 lg:px-7'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label
