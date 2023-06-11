@@ -1,5 +1,5 @@
 # Thư mục app
-## Thư mục chứa các file chính của ứng dụng
+Thư mục chứa các file chính của ứng dụng
 
 ## Cấu trúc thư mục:
 ### Thư muc api: chứa các file liên quan đến api
