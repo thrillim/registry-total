@@ -116,33 +116,31 @@ export default function AddAccountForm() {
                 *
               </span>
             </label>
-            <div className='container flex flex-row'>
-              <input
-                type={isPasswordVisible ? "text" : "password"}
-                placeholder='Mật khẩu'
-                ref={passwordRef}
-                required
-                className='input input-bordered w-full max-w-xs text-black'
-                end
-              />
-            </div>
-            <div className='flex flex-row gap-4 mx-auto mb-4'>
-              <button
-                className='btn btn-outline btn-neutral'
-                type='reset'
-              >
-                Hủy bỏ
-              </button>
-              <button
-                type='submit'
-                className='btn btn-primary'
-              >
-                Thêm mới
-              </button>
-            </div>
-            </div>
-          </form>
-        </div>
-      </>
-    );
+            <input
+              type={isPasswordVisible ? "text" : "password"}
+              placeholder='Mật khẩu'
+              ref={passwordRef}
+              required
+              className='input input-bordered w-full max-w-xs text-black'
+              end
+            />
+          </div>
+          <div className='flex flex-row gap-4 mx-auto mb-4'>
+            <button
+              className='btn btn-outline btn-neutral'
+              type='reset'
+            >
+              Hủy bỏ
+            </button>
+            <button
+              type='submit'
+              className='btn btn-primary'
+            >
+              Thêm mới
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
+  );
 }
