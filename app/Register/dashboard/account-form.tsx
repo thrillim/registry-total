@@ -132,6 +132,7 @@ export default function AddAccountForm() {
             <input
               type='text'
               placeholder='Tên đăng nhập'
+              autoComplete='username'
               ref={usernameRef}
               required
               className='input input-bordered w-full max-w-xs text-black'
@@ -148,6 +149,7 @@ export default function AddAccountForm() {
             <input
               type={isPasswordVisible ? "text" : "password"}
               placeholder='Mật khẩu'
+              autoComplete='password'
               ref={passwordRef}
               required
               className='input input-bordered w-full max-w-xs text-black'

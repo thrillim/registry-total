@@ -11,7 +11,7 @@ export default function Centers() {
   //   fetcher
   // );
   const { data: centers, error, isLoading } = useSWR(
-    'http://localhost:3000/api/getCenters',
+    'http://localhost:3000/RegistCenter.json',
     fetcher
   );
   if (error) return 'An error has occurred.';
