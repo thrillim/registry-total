@@ -15,7 +15,7 @@ export async function GET(request: Request) {
         include: {
           RegistCenter: {
             select: {
-              centerName: true,
+              centerCode: true,
               centerProvince: true,
             },
           },

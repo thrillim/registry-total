@@ -17,7 +17,7 @@ export async function GET(
         include: {
           RegistCenter: {
             select: {
-              centerName: true,
+              centerCode: true,
               centerProvince: true,
             },
           },

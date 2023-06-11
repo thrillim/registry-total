@@ -7,21 +7,40 @@ import useSWR  from 'swr';
 const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
 export default function Registers() {
-  // const data = await fetch('http://localhost:3000/api/getCenters');
-  // const centers: Center[] = await data.json();
-  // console.log(centers);
-  const { data: regists, error, isLoading } = useSWR(
-    'http://localhost:3000/Registers.json',
-    fetcher
-  );
+  // const { data: regists, error, isLoading } = useSWR(
+  //   'http://localhost:3000/Registers.json',
+  //   fetcher
+  // );
+  const {
+    data: registStatus,
+    error,
+    isLoading,
+  } = useSWR('http://localhost:3000/api/getRegistStatus', fetcher);
   if (error) return 'An error has occurred.';
-  if (isLoading) return 'Loading centers...';
+  if (isLoading) return 'Loading registration status...';
 
+  if (registStatus.length > 0) {
+    registStatus.forEach((reStatus: any) => {
+      // add CarInfo and RegistCenter to regists
+      reStatus.bienSo = reStatus.CarInfo.bienSo;
+      reStatus.loai = reStatus.CarInfo.loai;
+      reStatus.centerCode = reStatus.RegistCenter.centerCode;
+      reStatus.centerProvince = reStatus.RegistCenter.centerProvince;
+
+      // format date to dd-mm-yy
+      reStatus.statusCreatedAt = new Date(
+        reStatus.statusCreatedAt
+      ).toLocaleDateString('vi-VN');
+      reStatus.statusValidUntil = new Date(
+        reStatus.statusValidUntil
+      ).toLocaleDateString('vi-VN');
+    });
+  }
 
   return (
     <DataTable
       columns={columns}
-      data={regists}
+      data={registStatus}
     />
   );
 }

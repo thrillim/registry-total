@@ -67,7 +67,7 @@ export default async function RegisterDashboarḍ̣̣̣() {
             <Registers />
           </div>
           <div className="container mt-16 max-w-[95%] mx-auto">
-            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe đã và sắp hết hạn đăng kiểm</h3>
+            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe hết hạn đăng kiểm trong 30 ngày tới</h3>
             <ExpiredCars />
             <NextMonthPrediction />
           </div>
