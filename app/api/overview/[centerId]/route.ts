@@ -70,6 +70,7 @@ export async function GET(
       const previousQuarter = await prisma.registStatus.count({
         where: {
           status: 'Thành công',
+          RegistCenterId: Number(params.centerId),
           statusCreatedAt: {
             gte: new Date(
               getPreviousQuarterAndYear().year,
@@ -90,6 +91,7 @@ export async function GET(
       const currentYear = await prisma.registStatus.count({
         where: {
           status: 'Thành công',
+          RegistCenterId: Number(params.centerId),
           statusCreatedAt: {
             gte: new Date(new Date().getFullYear(), 0, 1),
             lt: new Date(),
