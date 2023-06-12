@@ -24,8 +24,6 @@ export default function Registers({ centerId }) {
       // add CarInfo and RegistCenter to regists
       reStatus.bienSo = reStatus.CarInfo.bienSo;
       reStatus.loai = reStatus.CarInfo.loai;
-      reStatus.centerCode = reStatus.RegistCenter.centerCode;
-      reStatus.centerProvince = reStatus.RegistCenter.centerProvince;
 
       // format date to dd-mm-yy
       reStatus.statusCreatedAt = new Date(

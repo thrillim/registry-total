@@ -15,12 +15,6 @@ export async function GET(
           RegistCenterId: Number(params.centerId),
         },
         include: {
-          RegistCenter: {
-            select: {
-              centerCode: true,
-              centerProvince: true,
-            },
-          },
           CarInfo: {
             select: {
               bienSo: true,
