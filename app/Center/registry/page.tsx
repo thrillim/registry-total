@@ -3,7 +3,7 @@ import MainNav from "../main-nav"
 import TongQuat from "./check1"
 import DownloadCertificate from "./certificate"
 import { SearchBar } from "./searchBar"
-import Khung from "./check2"
+import PhanTren from "./check2"
 
 export const metadata: Metadata = {
     title: "Đăng kiểm xe",
@@ -38,11 +38,11 @@ export default async function CarRegistry() {
                     className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
                     {(check.check1) ? (
                         <summary className='collapse-title text-xl font-semibold text-green-600'>
-                            1. Kiểm tra nhận dạng tổng quát
+                            1. Kiểm tra nhận dạng, tổng quát
                         </summary >)
                         : (
                             <summary className='collapse-title text-xl font-semibold text-red-600'>
-                                1. Kiểm tra nhận dạng tổng quát
+                                1. Kiểm tra nhận dạng, tổng quát
                             </summary>
                         )
                     }
@@ -55,16 +55,33 @@ export default async function CarRegistry() {
                     className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
                     {(check.check1) ? (
                         <summary className='collapse-title text-xl font-semibold text-green-600'>
-                            2. Kiểm tra khung và các phần gắn với khung
+                            2. Kiểm tra phần trên của phương tiện
                         </summary >)
                         : (
                             <summary className='collapse-title text-xl font-semibold text-red-600'>
-                                2. Kiểm tra khung và các phần gắn với khung
+                                2. Kiểm tra phần trên của phương tiện
                             </summary>
                         )
                     }
                     <div className="collapse-content">
-                        <Khung />
+                        <PhanTren />
+                    </div>
+                </details >
+
+                <details id="check1" tabIndex={0}
+                    className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
+                    {(check.check1) ? (
+                        <summary className='collapse-title text-xl font-semibold text-green-600'>
+                            3. Kiểm tra hiệu quả phanh và trượt ngang
+                        </summary >)
+                        : (
+                            <summary className='collapse-title text-xl font-semibold text-red-600'>
+                                3. Kiểm tra hiệu quả phanh và trượt ngang
+                            </summary>
+                        )
+                    }
+                    <div className="collapse-content">
+                        <PhanTren />
                     </div>
                 </details >
 
