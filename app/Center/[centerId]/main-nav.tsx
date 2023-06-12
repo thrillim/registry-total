@@ -1,4 +1,5 @@
 import Logo from "@/app/components/Logo/logo"
+import Link from 'next/link'
 
 export default function MainNav({
     className,
@@ -29,19 +30,19 @@ export default function MainNav({
                     <ul tabIndex={0} className="dropdown-content menu
                     p-2 glass shadow bg-base-100 rounded-box w-max 
                     text-black text-md font-semibold">
-                        <li><a href="/Center/dashboard#ManageReg">Quản lý đăng kiểm </a></li>
-                        <li><a href="/Center/dashboard#ManageCars">Quản lý ô tô</a></li>
+                        <li><Link href={`/Center/${centerId}/dashboard#ManageReg`}>Quản lý đăng kiểm </Link></li>
+                        <li><Link href={`/Center/${centerId}/dashboard#ManageCars`}>Quản lý ô tô</Link></li>
                         <li>
                             <details>
                                 <summary>
-                                    <a href="/Center/registry">Đăng kiểm xe</a>
+                                    <Link href={`/Center/${centerId}/registry`}>Đăng kiểm xe</Link>
                                 </summary>
                                 <ul>
-                                    <li><a href="/Center/registry">Kiểm tra nhận dạng tổng quát</a></li>
-                                    <li><a href="/Center/registry">Kiểm tra phần trên của phương tiện</a></li>
-                                    <li><a href="/Center/registry">Kiểm tra hiệu quả phanh và trượt ngang</a></li>
-                                    <li><a href="/Center/registry">Kiểm tra môi trường</a></li>                                    
-                                    <li><a href="/Center/registry">Kiểm tra phần dưới của phương tiện</a></li>
+                                    <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra nhận dạng tổng quát</Link></li>
+                                    <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra phần trên của phương tiện</Link></li>
+                                    <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra hiệu quả phanh và trượt ngang</Link></li>
+                                    <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra môi trường</Link></li>                                    
+                                    <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra phần dưới của phương tiện</Link></li>
                                 </ul>
                             </details>
                             
@@ -57,7 +58,7 @@ export default function MainNav({
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Trung tâm đăng kiểm</h1>
             </div>
             <div className="navbar-end">
-                <div className="btn btn-outline btn-accent btn-sm mx-2"><a href={`/Center/${centerId}/account`}>Tài khoản</a></div>
+                <div className="btn btn-outline btn-accent btn-sm mx-2"><Link href={`/Center/${centerId}/account`}>Tài khoản</Link></div>
                 <div className="btn btn-error btn-sm mx-2">Đăng xuất</div>
             </div>
         </nav>
