@@ -11,7 +11,7 @@ export default function TongQuat() {
         <div className="container mb-3 mx-auto p-3">
             <form method="post flex flex-col mx-auto">
                 <div className="form-control">
-                    <div className="font-semibold text-lg">1.1. Biển số đăng ký</div>
+                      <div className="font-semibold text-lg">1.1. Biển số đăng ký</div>
                     <label className="label cursor-pointer flex flex-row gap-5">
                         <span className="label-text">Không đủ số lượng</span>
                         <input type="checkbox" className="checkbox"
