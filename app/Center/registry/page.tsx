@@ -4,6 +4,8 @@ import TongQuat from "./check1"
 import DownloadCertificate from "./certificate"
 import { SearchBar } from "./searchBar"
 import PhanTren from "./check2"
+import Phanh from "./check3"
+import MoiTruong from "./check4"
 
 export const metadata: Metadata = {
     title: "Đăng kiểm xe",
@@ -51,7 +53,7 @@ export default async function CarRegistry() {
                     </div>
                 </details >
 
-                <details id="check1" tabIndex={0}
+                <details id="check2" tabIndex={0}
                     className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
                     {(check.check1) ? (
                         <summary className='collapse-title text-xl font-semibold text-green-600'>
@@ -68,7 +70,7 @@ export default async function CarRegistry() {
                     </div>
                 </details >
 
-                <details id="check1" tabIndex={0}
+                <details id="check3" tabIndex={0}
                     className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
                     {(check.check1) ? (
                         <summary className='collapse-title text-xl font-semibold text-green-600'>
@@ -81,7 +83,24 @@ export default async function CarRegistry() {
                         )
                     }
                     <div className="collapse-content">
-                        <PhanTren />
+                        <Phanh />
+                    </div>
+                </details >
+
+                <details id="check34" tabIndex={0}
+                    className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
+                    {(check.check1) ? (
+                        <summary className='collapse-title text-xl font-semibold text-green-600'>
+                            4. Kiểm tra môi trường
+                        </summary >)
+                        : (
+                            <summary className='collapse-title text-xl font-semibold text-red-600'>
+                                4. Kiểm tra môi trường
+                            </summary>
+                        )
+                    }
+                    <div className="collapse-content">
+                        <MoiTruong />
                     </div>
                 </details >
 
