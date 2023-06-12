@@ -39,7 +39,7 @@ export default async function CenterDashboarḍ̣̣̣({
             </h2>
             <div className='flex flex-col gap-7'>
               <div className='container max-w-[90%] mx-auto'>
-                <RegisterSummary />
+                <RegisterSummary centerId={session.user.RegistCenterId}/>
               </div>
               <div className='container max-w-[90%] mx-auto'>
                 <h3 className='font-bold text-2xl text-primary my-5 mx-auto'>

@@ -37,7 +37,7 @@
     "hanhchinhvn": "^1.6.0",
     "jsonwebtoken": "^9.0.0",
     "lucide-react": "^0.221.0",
-    "next": "^13.4.4",
+    "next": "^13.4.5",
     "next-auth": "^4.22.1",
     "postcss": "8.4.23",
     "prisma": "^4.15.0",
