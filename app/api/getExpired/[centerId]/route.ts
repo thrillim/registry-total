@@ -24,6 +24,7 @@ export async function GET(
           statusValidUntil: {
             lte: today, // less than or equal
           },
+          RegistCenterId: Number(params.centerId),
         },
         include: {
           RegistCenter: {
@@ -39,12 +40,27 @@ export async function GET(
             },
           },
         },
+        // order by statusValidUntil from latest to oldest
+        orderBy: {
+          statusValidUntil: 'desc',
+        },
       });
+
+      // if one bienSo exist in more than one registStatus => keep the one with the latest statusValidUntil
+      let uniqueRegistStatus = [];
+      let uniquePlate = [];
+      registStatus.forEach((item) => {
+        if (!uniquePlate.includes(item.CarInfo.bienSo)) {
+          uniqueRegistStatus.push(item);
+          uniquePlate.push(item.CarInfo.bienSo);
+        }
+      });
+
       // get real value of today
       today.setDate(today.getDate() - limit);
       // add expiredStatus to registStatus
-      if (registStatus.length) {
-        registStatus.forEach((item) => {
+      if (uniqueRegistStatus.length) {
+        uniqueRegistStatus.forEach((item) => {
           // if today is after statusValidUntil => set expiredStatus to "Hết hạn"
           if (today > item.statusValidUntil) {
             item.expiredStatus = 'Hết hạn';
@@ -53,7 +69,7 @@ export async function GET(
           }
         });
       }
-      return new Response(JSON.stringify(registStatus), { status: 200 });
+      return new Response(JSON.stringify(uniqueRegistStatus), { status: 200 });
     } catch (error: any) {
       return new Response(JSON.stringify({ message: error.message }), {
         status: 500,
