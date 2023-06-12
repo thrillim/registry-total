@@ -21,7 +21,8 @@ export const metadata: Metadata = {
 
 export default async function RegisterDashboarḍ̣̣̣() {
   const session = await getServerSession(authOptions);
-  if (session.user.accRole !== 'Admin') redirect('/');
+  if (!session) redirect('/');
+  else if (session.user.accRole !== 'Admin') redirect('/');
   else
     return (
       <>
