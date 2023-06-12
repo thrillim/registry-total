@@ -1,3 +1,7 @@
+import { getServerSession } from 'next-auth/next'
+import { authOptions } from '../../api/auth/[...nextauth]/route'
+import { redirect } from 'next/navigation'
+
 import { Metadata } from "next";
 import MainNav from './main-nav';
 import Centers from './centers-table';
@@ -16,6 +20,10 @@ export const metadata: Metadata = {
 };
 
 export default async function RegisterDashboarḍ̣̣̣() {
+  const session = await getServerSession(authOptions)
+  if (session.user.accRole!=='Admin') 
+    redirect('/')
+   else 
   return (
     <>
       <div className='flex flex-col bg-white text-black'>
