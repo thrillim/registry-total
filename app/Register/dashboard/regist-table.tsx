@@ -7,13 +7,15 @@ import useSWR  from 'swr';
 const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
 export default function Registers() {
-  // const data = await fetch('http://localhost:3000/api/getCenters');
-  // const centers: Center[] = await data.json();
-  // console.log(centers);
-  const { data: regists, error, isLoading } = useSWR(
-    'http://localhost:3000/Registers.json',
-    fetcher
-  );
+  // const { data: regists, error, isLoading } = useSWR(
+  //   'http://localhost:3000/Registers.json',
+  //   fetcher
+  // );
+  const {
+    data: registStatus,
+    error,
+    isLoading,
+  } = useSWR('http://localhost:3000/api/getRegistStatus', fetcher);
   if (error) return 'Có lỗi xảy ra khi tải thông tin';
   if (isLoading) return 'Đang tải thông tin....';
 
@@ -21,7 +23,7 @@ export default function Registers() {
   return (
     <DataTable
       columns={columns}
-      data={regists}
+      data={registStatus}
     />
   );
 }

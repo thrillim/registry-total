@@ -6,12 +6,11 @@ import { ArrowUpDown } from "lucide-react";
 export type Cars = {
     bienSo: string;
     ownerName: string;
+    ownerAddress: string;
     loai: string;
     nhanHieu: string;
-    centerName: string;
-    centerProvince: string;
-    statusCreatedAt: Date;
-    statusValidUntil: Date;
+    namSx: number;
+    soQuanLy: string;
 };
 
 export const columns: ColumnDef<Cars>[] = [
@@ -24,6 +23,10 @@ export const columns: ColumnDef<Cars>[] = [
         header: 'Tên chủ xe',
     },
     {
+      accessorKey: 'ownerAddress',
+      header: 'Địa chỉ chủ xe',
+    },
+    {
         accessorKey: 'loai',
         header: 'Loại xe',
     },
@@ -32,39 +35,11 @@ export const columns: ColumnDef<Cars>[] = [
         header: 'Hãng xe',
     },
     {
-        accessorKey: 'centerName',
-        header: 'Trung tâm đăng kiểm',
+        accessorKey: 'namSx',
+        header: 'Năm sản xuất',
     },
     {
-        accessorKey: 'centerProvince',
-        header: 'Tỉnh thành',
-    },
-    {
-        accessorKey: 'statusCreatedAt',
-        // header: 'Ngày đăng kiểm',
-        header: ({ column }) => {
-            return (
-              <div className="flex items-center hover:cursor-pointer"         
-                onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-              >
-                Ngày đăng kiểm
-                <ArrowUpDown className="ml-2 h-4 w-4" />
-              </div>
-            )
-          },
-    },
-    {
-        accessorKey: 'statusValidUntil',
-        // header: 'Ngày hết hạn',
-        header: ({ column }) => {
-            return (
-              <div className="flex items-center hover:cursor-pointer"         
-                onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-              >
-                Ngày hết hạn
-                <ArrowUpDown className="ml-2 h-4 w-4" />
-              </div>
-            )
-          },
+        accessorKey: 'soQuanLy',
+        header: 'Sổ quản lý',
     },
 ];

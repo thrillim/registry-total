@@ -67,8 +67,11 @@ export default async function RegisterDashboarḍ̣̣̣() {
             <Registers />
           </div>
           <div className="container mt-16 max-w-[95%] mx-auto">
-            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe đã và sắp hết hạn đăng kiểm</h3>
+            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Xe hết hạn đăng kiểm trong 30 ngày tới</h3>
             <ExpiredCars />
+          </div>
+          <div className="container mt-16 max-w-[95%] mx-auto">
+            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Dự báo đăng kiểm mới</h3>
             <NextMonthPrediction />
           </div>
         </div>
@@ -78,8 +81,12 @@ export default async function RegisterDashboarḍ̣̣̣() {
         {/* Quản lý ô tô*/}
         <div id="ManageCars" className="p-8 pt-6 bg-base-100 w-full min-h-screen">
           <h2 className="font-bold text-3xl text-primary mx-10">Quản lý ô tô</h2>
-          <div className="container mt-16 max-w-[85%] mx-auto">
+          <div className="container mt-16 max-w-[95%] mx-auto">
+            <h3 className="font-bold text-2xl text-primary my-5 mx-auto">Danh sách xe chưa từng đăng kiểm</h3>
             <Cars />
+            <div className='my-5 ml-10 btn btn-primary'>
+              <a href='#'>Thêm mới</a>
+            </div>
           </div>
         </div>
       </div>
