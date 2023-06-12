@@ -3,6 +3,9 @@
 
 import React, { useEffect, useState } from "react"
 import { PDFDownloadLink, Page, Text, View, Document, StyleSheet, Font, Image } from '@react-pdf/renderer';
+import { useSWR } from 'swr';
+
+const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
 Font.register({
   family: 'Times News Roman',
@@ -119,7 +122,20 @@ const data = {
   code_number: '132353465'
 }
 
-const Certificate = () => {
+const Certificate = ({ statusId }) => {
+  // const res1 = useSWR(
+  //   `http://localhost:3000/api/getExpired/${centerId}`,
+  //   fetcher
+  // );
+  // const res2 = useSWR(
+  //   `http://localhost:3000/api/getNewCars/${centerId}`,
+  //   fetcher
+  // );
+
+  // if (res1.isLoading || res2.isLoading) return 'Đang tải thông tin...';
+
+  // if (res1.error || res2.error) return 'Đã xảy ra lỗi.';
+
 
   return (
     <Document>

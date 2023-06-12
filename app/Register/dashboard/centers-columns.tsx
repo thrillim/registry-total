@@ -77,6 +77,6 @@ export const columns: ColumnDef<Center>[] = [
   },
   {
     accessorKey: 'centerManager',
-    header: 'Quản lý',
+    header: 'Quản lý/Người phụ trách',
   },
 ];

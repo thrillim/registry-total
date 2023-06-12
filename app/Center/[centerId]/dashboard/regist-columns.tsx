@@ -3,53 +3,43 @@
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown } from "lucide-react";
 
-export type ExpiredCars = {
+export type Register = {
   bienSo: string;
   loai: string;
-  ownerName: string;
-  centerCode: string;
-  centerProvince: string;
-  expiredStatus: string;
+  status: string;
+  statusNote: string;
   statusCreatedAt: Date;
   statusValidUntil: Date;
 };
 
-export const columns: ColumnDef<ExpiredCars>[] = [
+export const columns: ColumnDef<Register>[] = [
   {
     accessorKey: 'bienSo',
-    header: 'Biển số xe',
-  },
-  {
-    accessorKey: 'loai',
-    header: 'Loại xe',
-  },
-  {
-    accessorKey: 'centerCode',
     header: ({ column }) => {
       return (
         <div
           className='flex items-center hover:cursor-pointer'
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          Mã trung tâm
+          Biển số xe
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </div>
       );
     },
   },
   {
-    accessorKey: 'centerProvince',
-    header: 'Tỉnh thành',
+    accessorKey: 'loai',
+    header: 'Loại xe',
   },
   {
-    accessorKey: 'expiredStatus',
+    accessorKey: 'status',
     header: ({ column }) => {
       return (
         <div
           className='flex items-center hover:cursor-pointer'
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
-          Trạng thái
+          Kết quả đăng kiểm
           <ArrowUpDown className='ml-2 h-4 w-4' />
         </div>
       );
@@ -84,5 +74,9 @@ export const columns: ColumnDef<ExpiredCars>[] = [
         </div>
       );
     },
+  },
+  {
+    accessorKey: 'statusNote',
+    header: 'Nội dung ghi chú',
   },
 ];

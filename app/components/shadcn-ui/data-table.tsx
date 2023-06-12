@@ -194,6 +194,9 @@ export function DataTable<TData, TValue>({
           )}
         </TableBody>
       </Table>
+      <div className="flex-1 text-sm text-teal-600 text-muted-foreground px-4 py-2">
+        {table.getFilteredRowModel().rows.length} row(s) in total.
+      </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export async function GET(request: Request) {
         include: {
           RegistCenter: {
             select: {
-              centerName: true,
+              centerCode: true,
               centerProvince: true,
             },
           },
@@ -26,6 +26,10 @@ export async function GET(request: Request) {
             },
           },
         },
+        // sort by statusCreatedAt
+        orderBy: {
+          statusCreatedAt: 'asc', 
+        }
       });
       return new Response(JSON.stringify(registStatus), { status: 200 });
     } catch (error: any) {
