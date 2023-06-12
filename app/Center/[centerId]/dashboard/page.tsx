@@ -28,7 +28,7 @@ export default async function CenterDashboarḍ̣̣̣({
       <>
         <div className='flex flex-col bg-white text-black'>
           <div className='border-b z-50'>
-            <MainNav />
+            <MainNav centerId={session.user.RegistCenterId}/>
           </div>
           <div
             id='ManageReg'
@@ -45,14 +45,14 @@ export default async function CenterDashboarḍ̣̣̣({
                 <h3 className='font-bold text-2xl text-primary my-5 mx-auto'>
                   Bảng theo dõi Đăng kiểm
                 </h3>
-                <Registers />
+                <Registers centerId={session.user.RegistCenterId} />
               </div>
               <div className='container max-w-[90%] mx-auto'>
                 <h3 className='font-bold text-2xl text-primary my-5 mx-auto'>
                   Xe đã và sắp hết hạn đăng kiểm
                 </h3>
-                <ExpiredCars />
-                <NextMonthPrediction />
+                <ExpiredCars centerId={session.user.RegistCenterId} />
+                <NextMonthPrediction centerId={session.user.RegistCenterId} />
               </div>
             </div>
           </div>
