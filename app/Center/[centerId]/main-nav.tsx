@@ -58,7 +58,7 @@ export default function MainNav({
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Trung tâm đăng kiểm</h1>
             </div>
             <div className="navbar-end">
-                <div className="btn btn-outline btn-accent btn-sm mx-2"><Link href={`/Center/${centerId}/account`}>Tài khoản</Link></div>
+                <div className="btn btn-outline btn-accent btn-sm mx-2"><a href={`/Center/${centerId}/account`}>Tài khoản</a></div>
                 <div className="btn btn-error btn-sm mx-2">Đăng xuất</div>
             </div>
         </nav>

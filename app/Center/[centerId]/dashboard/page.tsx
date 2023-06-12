@@ -52,8 +52,13 @@ export default async function CenterDashboarḍ̣̣̣({
                   Xe đã và sắp hết hạn đăng kiểm
                 </h3>
                 <ExpiredCars centerId={session.user.RegistCenterId} />
-                <NextMonthPrediction centerId={session.user.RegistCenterId} />
               </div>
+              <div className='container max-w-[90%] mx-auto'>
+              <h3 className='font-bold text-2xl text-primary my-5 mx-auto'>
+                Dự báo đăng kiểm mới
+              </h3>
+              <NextMonthPrediction centerId={session.user.RegistCenterId} />
+            </div>
             </div>
           </div>
 
