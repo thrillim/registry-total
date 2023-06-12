@@ -15,18 +15,16 @@ export async function GET(
           RegistCenterId: Number(params.centerId),
         },
         include: {
-          RegistCenter: {
-            select: {
-              centerName: true,
-              centerProvince: true,
-            },
-          },
           CarInfo: {
             select: {
               bienSo: true,
               loai: true,
             },
           },
+        },
+        // sort by statusCreatedAt
+        orderBy: {
+          statusCreatedAt: 'asc',
         },
       });
       return new Response(JSON.stringify(registStatus), { status: 200 });

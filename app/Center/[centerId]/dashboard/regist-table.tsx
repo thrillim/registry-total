@@ -6,7 +6,7 @@ import useSWR  from 'swr';
 
 const fetcher = (url: RequestInfo | URL) => fetch(url).then((res) => res.json());
 
-export default function Registers() {
+export default function Registers({ centerId }) {
   // const { data: regists, error, isLoading } = useSWR(
   //   'http://localhost:3000/Registers.json',
   //   fetcher
@@ -15,7 +15,7 @@ export default function Registers() {
     data: registStatus,
     error,
     isLoading,
-  } = useSWR('http://localhost:3000/api/getRegistStatus', fetcher);
+  } = useSWR(centerId ? `http://localhost:3000/api/getRegistStatus/${centerId}` : null, fetcher);
   if (error) return 'Có lỗi xảy ra khi tải thông tin';
   if (isLoading) return 'Đang tải thông tin....';
 
@@ -24,8 +24,6 @@ export default function Registers() {
       // add CarInfo and RegistCenter to regists
       reStatus.bienSo = reStatus.CarInfo.bienSo;
       reStatus.loai = reStatus.CarInfo.loai;
-      reStatus.centerCode = reStatus.RegistCenter.centerCode;
-      reStatus.centerProvince = reStatus.RegistCenter.centerProvince;
 
       // format date to dd-mm-yy
       reStatus.statusCreatedAt = new Date(
