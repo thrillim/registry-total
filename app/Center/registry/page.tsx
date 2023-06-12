@@ -6,6 +6,7 @@ import { SearchBar } from "./searchBar"
 import PhanTren from "./check2"
 import Phanh from "./check3"
 import MoiTruong from "./check4"
+import PhanDuoi from "./check5"
 
 export const metadata: Metadata = {
     title: "Đăng kiểm xe",
@@ -87,7 +88,7 @@ export default async function CarRegistry() {
                     </div>
                 </details >
 
-                <details id="check34" tabIndex={0}
+                <details id="check4" tabIndex={0}
                     className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
                     {(check.check1) ? (
                         <summary className='collapse-title text-xl font-semibold text-green-600'>
@@ -104,6 +105,23 @@ export default async function CarRegistry() {
                     </div>
                 </details >
 
+                <details id="check5" tabIndex={0}
+                    className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
+                    {(check.check1) ? (
+                        <summary className='collapse-title text-xl font-semibold text-green-600'>
+                            5. Kiểm tra phần dưới của phương tiện
+                        </summary >)
+                        : (
+                            <summary className='collapse-title text-xl font-semibold text-red-600'>
+                                5. Kiểm tra phần dưới của phương tiện
+                            </summary>
+                        )
+                    }
+                    <div className="collapse-content">
+                        <PhanDuoi />
+                    </div>
+                </details >
+
                 {(check.check1 && check.check2 && check.check3 && check.check4 && check.check5)
                     ?
                     (<div>
@@ -114,7 +132,6 @@ export default async function CarRegistry() {
                     : (
                         <div className="mx-auto flex flex-col gap-4">
                             <span className="text-lg font-semibold text-error">Kiểm định không thành công</span>
-                            <div className="btn">In giấy hẹn lại</div>
                         </div>
                     )
                 }

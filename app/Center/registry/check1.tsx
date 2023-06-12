@@ -35,7 +35,7 @@ export default function TongQuat() {
                     <div className="font-semibold text-lg max-w-lg">
                         Kiểu loại, kích thước xe
                     </div>
-                    <CheckBox text={"Biểu trưng; thông tin kẻ trên cửa xe, thành xe theo quy định"} />
+                    <CheckBox text={"Không đúng với hồ sơ kỹ thuật"} />
                 </div>
                 <div className="form-control">
                     <div className="font-semibold text-lg max-w-lg">
