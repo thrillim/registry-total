@@ -28,6 +28,10 @@ export async function GET(
             },
           },
         },
+        // sort by statusCreatedAt
+        orderBy: {
+          statusCreatedAt: 'asc',
+        },
       });
       return new Response(JSON.stringify(registStatus), { status: 200 });
     } catch (error: any) {
