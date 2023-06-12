@@ -3,6 +3,7 @@ import MainNav from "../main-nav"
 import TongQuat from "./check1"
 import DownloadCertificate from "./certificate"
 import { SearchBar } from "./searchBar"
+import Khung from "./check2"
 
 export const metadata: Metadata = {
     title: "Đăng kiểm xe",
@@ -31,9 +32,8 @@ export default async function CarRegistry() {
 
             <div className="container w-full min-w-max min-h-screen 
                 my-20 mx-auto flex flex-col gap-10 items-center">
-
                 <h2 className="font-bold text-3xl text-center text-primary">Kết quả kiểm tra</h2>
-
+                
                 <details id="check1" tabIndex={0}
                     className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
                     {(check.check1) ? (
@@ -51,7 +51,23 @@ export default async function CarRegistry() {
                     </div>
                 </details >
 
-                
+                <details id="check1" tabIndex={0}
+                    className="collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100">
+                    {(check.check1) ? (
+                        <summary className='collapse-title text-xl font-semibold text-green-600'>
+                            2. Kiểm tra khung và các phần gắn với khung
+                        </summary >)
+                        : (
+                            <summary className='collapse-title text-xl font-semibold text-red-600'>
+                                2. Kiểm tra khung và các phần gắn với khung
+                            </summary>
+                        )
+                    }
+                    <div className="collapse-content">
+                        <Khung />
+                    </div>
+                </details >
+
                 {(check.check1 && check.check2 && check.check3 && check.check4 && check.check5)
                     ?
                     (<div>
