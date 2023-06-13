@@ -1,4 +1,5 @@
 # Bài tập lớn môn Phát triển ứng dụng Web
+Link [Github](https://github.com/thrillim/registry-total): https://github.com/thrillim/registry-total
 
 ![Giới thiệu dự án](https://github.com/thrillim/registry-total/assets/40814521/ee891557-855c-4c23-9121-c2c560a54955)
 
