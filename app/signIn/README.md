@@ -1,8 +1,10 @@
 # Thư mục `signIn`
 Trang đăng nhập vào hệ thống cho cả Cục Đăng kiểm và Trung tâm Đăng kiểm.
 
-*Giao diện đăng nhập ở màn hình lớn*
-![image](https://github.com/thrillim/registry-total/assets/40814521/0827dc03-8829-456b-a5d5-b5e0340c5aac)
+*Giao diện đăng nhập ở màn hình lớn*:
 
-*Giao diện đăng nhập ở màn hình bé*
-![image](https://github.com/thrillim/registry-total/assets/40814521/a67f7836-3574-43aa-bd30-4bdbd63cd057)
+![image](https://github.com/thrillim/registry-total/assets/40814521/bcfe6ba4-3731-4875-a6e1-dde7530499a7)
+
+*Giao diện đăng nhập ở màn hình bé*:
+
+![image](https://github.com/thrillim/registry-total/assets/40814521/7e78f3dc-b42b-4895-821b-cfe621e9abbf)
