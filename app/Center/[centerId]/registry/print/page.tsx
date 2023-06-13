@@ -1,5 +1,10 @@
 'use client';
 
+import DownloadCertificate from './certificate';
+
+
 export default function Print() {
-  return <div>In</div>;
+  return (
+    <DownloadCertificate /> 
+  );
 }

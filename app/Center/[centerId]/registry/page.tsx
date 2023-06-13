@@ -4,7 +4,6 @@ import { redirect } from 'next/navigation';
 
 import { Metadata } from 'next';
 import MainNav from '../main-nav';
-import DownloadCertificate from './certificate';
 import { SearchBar } from './searchBar';
 import CheckAll from './check_all';
 export const metadata: Metadata = {

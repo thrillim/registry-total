@@ -16,6 +16,11 @@ export async function GET(
       },
       include: {
         CarInfo: true,
+        RegistCenter: {
+          select: {
+            centerProvince: true,
+          }
+        },
       },
     });
     return new Response(JSON.stringify(registStatus), { status: 200 });
