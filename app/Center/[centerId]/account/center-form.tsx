@@ -2,17 +2,18 @@
 
 import React, { useRef, useState } from 'react';
 import { map } from 'zod';
+import useSWR  from 'swr';
 
 const data = {
-    centerCode: '12345',
-    centerName: 'Trung tâm Đăng kiểm số 1',
-    hotline: '0123456789',
-    email: 'email@gmail.com',
+    centerCode: '909',
+    centerName: 'TTDK XCG 2901S - Hà Nội',
+    hotline: '024.38585824',
+    email: '2901S@kiemdinhoto.vn',
     centerProvince: 'Hà Nội',
-    address: 'Số 1, đường 1, phường 1, quận 1, thành phố 1',
-    manager: 'Nguyễn Văn A',
+    address: 'Số 454 Phạm Văn Đồng - Từ Liêm - Hà Nội',
+    manager: 'Trương Mạnh Tiến',
     state: 'Hoạt động',
-}
+  };
 
 export default function CenterInfo() {
     const hotline = useRef('');

@@ -295,7 +295,7 @@ export default function TongQuat() {
 
                 <div className='w-full mx-auto text-center'>
                 <button
-                    className='btn btn-primary btn-sm mt-4'
+                    className='btn btn-primary btn-outline btn-sm mt-4'
                     type='submit'
                 >
                     Xác nhận
