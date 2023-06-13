@@ -12,6 +12,8 @@ import Registers from './regist-table';
 import ExpiredCars from './expired-table';
 import NextMonthPrediction from './prediction';
 import Cars from './cars-table';
+import Link from 'next/link';
+import Upload from './upload-file';
 
 export const metadata: Metadata = {
   title: 'Cục Đăng kiểm Việt Nam',
@@ -37,9 +39,9 @@ export default async function RegisterDashboarḍ̣̣̣() {
             <div className='container mx-auto py-5 text-black'>
               <Centers />
             </div>
-            <div className='my-5 ml-10 btn btn-primary'>
-              <a href='#AddCenter'>Thêm mới</a>
-            </div>
+            <Link className='my-5 ml-10 btn btn-primary' href='#AddCenter'>
+              <div>Thêm mới</div>
+            </Link>
           </div>
 
           <div className='divider '></div>
@@ -117,12 +119,10 @@ export default async function RegisterDashboarḍ̣̣̣() {
             </h2>
             <div className='container mt-16 max-w-[95%] mx-auto'>
               <h3 className='font-bold text-2xl text-primary my-5 mx-auto'>
-                Danh sách xe chưa từng đăng kiểm
+                Danh sách xe đã cấp biển số (chưa đăng kiểm)
               </h3>
               <Cars />
-              <div className='my-5 ml-10 btn btn-primary'>
-                <a href='#'>Thêm mới</a>
-              </div>
+              <Upload />
             </div>
           </div>
         </div>
