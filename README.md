@@ -14,9 +14,14 @@ Link [Github](https://github.com/thrillim/registry-total): https://github.com/th
 - Tạo giao diện responsive cho ứng dụng web, giúp người dùng tương tác với ứng dụng qua giao diện.
 - Xử lí input từ người dùng: tạo các ràng buộc từ input của người dùng.
 2. **Hoàng Thị Thu Hà** - 21020189: back-end developing
-- Tạo API, xử lý các request gửi về server.
-- Xử lý input từ người dùng trước khi import vào cơ sở dữ liệu (next-auth)
-- 
+- Tìm tài liệu liên quan đến công tác đăng kiểm thực tế và các yêu cầu cần có với hệ thống đăng kiểm.
+- Dựng cấu trúc cơ sở dữ liệu bằng hệ quản trị cơ sở dữ liệu quan hệ (mySQL).
+- Sử dụng ORM Prisma để độc lập cơ sở dữ liệu.
+- Sinh dữ liệu để sử dụng trong quá trình phát triển với số lượng lớn.
+- Tạo API, xử lý các request gửi về server với quan niệm không tin bất cứ thông tin gì gửi đến server.
+- Xử lý phân quyền người dùng dựa trên vai trò.
+
+
 
 ## Về dự án Registry Total
 ![Homepage của dự án](https://github.com/thrillim/registry-total/assets/40814521/febef42b-f3b1-4190-b7ae-dc6e6e618fe4)
