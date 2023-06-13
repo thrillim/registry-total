@@ -1,3 +1,7 @@
+export default function TongQuat() {
+    function setCheck(arg0: boolean) {
+        throw new Error("Function not implemented.")
+    }
 
     return (
         <div className="container mb-3 mx-auto p-3">

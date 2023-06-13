@@ -18,8 +18,10 @@ export default async function CenterAccount({
   params: { centerId: string };
 }) {
   const session = await getServerSession(authOptions);
-  if (!session) redirect('/')
-  else if (session.user.RegistCenterId !== Number(params.centerId)) redirect(`/Center/${session.user.RegistCenterId}/account`);
+  if (!session || session.user.accRole === 'Admin') redirect('/');
+  else if (session.user.RegistCenterId !== Number(params.centerId) 
+          && session.user.accRole === 'User') 
+    redirect(`/Center/${session.user.RegistCenterId}/account`);
   else
     return (
       <>

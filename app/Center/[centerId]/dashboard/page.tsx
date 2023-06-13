@@ -20,8 +20,10 @@ export default async function CenterDashboarḍ̣̣̣({
   params: { centerId: string };
 }) {
   const session = await getServerSession(authOptions);
-  if (!session) redirect('/')
-  else if (session.user.RegistCenterId !== Number(params.centerId))
+  if (!session) redirect('/');
+  else if (session.user.accRole === 'Admin') redirect('/Register/dashboard');
+  else if (session.user.RegistCenterId !== Number(params.centerId) 
+          && session.user.accRole === 'User') 
     redirect(`/Center/${session.user.RegistCenterId}/dashboard`);
   else
     return (

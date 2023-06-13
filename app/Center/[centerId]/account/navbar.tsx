@@ -10,10 +10,11 @@ export default function NavBar({
             className="navbar bg-base-100 flex items-center shadow-lg sticky space-x-4 lg:space-x-6"
         >
             <div className="navbar-start">
-                <a className='btn btn-ghost normal-case text-xl text-accent gap-2'>
+                <Link className='btn btn-ghost normal-case text-xl text-accent gap-2' 
+                    href="/">
                     <Logo />
                     <span className="max-sm:hidden">Registry Total</span>
-                </a>
+                </Link>
             </div>
             <div className="navbar-center">
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Trung tâm Đăng kiểm xe</h1>
