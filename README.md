@@ -69,5 +69,4 @@ Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page
 #### Đối với Trung tâm đăng kiểm
 - Ghi nhận kết quả đăng kiểm và cấp giấy chứng nhận đăng kiểm.
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm.
-![image](https://github.com/thrillim/registry-total/assets/40814521/6f8b0ba1-ac2f-46a0-95ef-b2a5686b57be)
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở trung tâm.
