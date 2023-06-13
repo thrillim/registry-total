@@ -1,10 +1,14 @@
+'use client';
+
 import Logo from "@/app/components/Logo/logo"
 import Link from "next/link"
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 export default function MainNav({
     className,
     ...props
 }: React.HTMLAttributes<HTMLElement>) {
+    const { data: session } = useSession();
     return (
         <nav
             className="navbar bg-base-100 flex items-center shadow-lg sticky space-x-4 lg:space-x-6"
@@ -45,7 +49,12 @@ export default function MainNav({
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Cục Đăng kiểm Việt Nam</h1>
             </div>
             <div className="navbar-end">
-                <div className="btn btn-error btn-sm mx-2">Đăng xuất</div>
+            <button
+          className='btn btn-sm btn-error'
+          onClick={() => signOut({ callbackUrl: 'http://localhost:3000' })}
+        >
+          Đăng xuất
+        </button>
             </div>
         </nav>
     )

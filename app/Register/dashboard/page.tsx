@@ -13,7 +13,6 @@ import ExpiredCars from './expired-table';
 import NextMonthPrediction from './prediction';
 import Cars from './cars-table';
 import Link from 'next/link';
-import Upload from './upload-file';
 
 export const metadata: Metadata = {
   title: 'Cục Đăng kiểm Việt Nam',
@@ -122,7 +121,14 @@ export default async function RegisterDashboarḍ̣̣̣() {
                 Danh sách xe đã cấp biển số (chưa đăng kiểm)
               </h3>
               <Cars />
-              <Upload />
+              <form className='flex flex-row gap-5 my-10 items-center container mx-auto'>
+                <label htmlFor="csv-file" className='text-lg font-semibold'>Upload file (.csv) để thêm danh sách xe: </label>
+                <input name='csv-file' type="file" accept='.csv'
+                  className='file file-input file-input-bordered file-input-sm'/>
+                <button className='btn btn-sm btn-primary btn-outline' type='submit'>
+                  Upload file
+                </button>
+              </form>
             </div>
           </div>
         </div>

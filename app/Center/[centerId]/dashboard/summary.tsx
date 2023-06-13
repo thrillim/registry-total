@@ -18,7 +18,7 @@ export default function RegisterSummary({ centerId }) {
     console.log('aaaaaaaa', overview);
     return (
       <>
-        <div className='card w-full shadow-lg text-black pt-5 mt-7 card-bordered min-w-max'>
+        <div className="card w-full shadow-lg text-black pt-5 mt-4 card-bordered min-w-max max-w-2xl mx-auto">
           <h2 className='text-3xl font-bold text-accent mx-auto card-title'>
             Tổng quan
           </h2>
