@@ -7,8 +7,15 @@
 - Giảng viên thực hành: **CN. Nguyễn Thị Thu Trang**
 
 ## Thành viên:
-1. **Lê Hoàng Minh Hà**: 21020621
-2. **Hoàng Thị Thu Hà**: 21020189
+1. **Lê Hoàng Minh Hà** - 21020621: front-end developing
+- Thiết kế giao diện, bố cục cho ứng dụng web với Figma.
+- Phát triển giao diện ứng dụng web cùng Tailwindcss và DaisyUI.
+- Tạo giao diện responsive cho ứng dụng web.
+- Xử lí input từ người dùng: tạo các ràng buộc từ input của người dùng.
+2. **Hoàng Thị Thu Hà** - 21020189: back-end developing
+- Tạo API, xử lý các request gửi về server.
+- Xử lý input từ người dùng trước khi import vào cơ sở dữ liệu (next-auth)
+- 
 
 ## Về dự án Registry Total
 ![Homepage của dự án](https://github.com/thrillim/registry-total/assets/40814521/febef42b-f3b1-4190-b7ae-dc6e6e618fe4)
