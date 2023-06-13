@@ -30,6 +30,6 @@ File chứa định dạng CSS cho toàn ứng dụng. Bên cạnh định dạn
 - Là file Homepage của dự án RegistryTotal
 ![image](https://github.com/thrillim/registry-total/assets/40814521/0443d532-fdeb-4106-bf50-9ac166ef06df)
 
-### File `Provider.tsx`:
+### File `Provider.tsx`: Cung cấp session, hỗ trợ lưu lại session của các thành phần, giúp lưu trữ và truy cập data.
 
 ### File `favicon.ico`: favicon của ứng dụng
