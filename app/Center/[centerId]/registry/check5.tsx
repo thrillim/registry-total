@@ -2,21 +2,85 @@
 
 'use client'
 
-import { CheckBox } from "./check_form"
+import { useState } from 'react';
 
 export default function PhanDuoi() {
+    const [checkedCount, setCheckedCount] = useState(0);
+  const [result, setResult] = useState(false);
+
+  const handleCheckboxChange = (event) => {
+    const { checked } = event.target;
+    setCheckedCount((prevCount) => (checked ? prevCount + 1 : prevCount - 1));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Kiểm tra giá trị của checkedCount và xác định kết quả
+    // const result = checkedCount > 0 ? false : true;
+    setResult(checkedCount > 0 ? false : true);
+    // save it to local localStorage
+    localStorage.setItem(
+      'check5',
+      JSON.stringify(checkedCount > 0 ? false : true)
+    );
+    console.log('Kết quả:', result);
+  };
     return (
+        <details
+      id='check1'
+      tabIndex={0}
+      className='collapse collapse-arrow  min-w-max max-w-lg border border-base-300 bg-base-100'
+    >
+      {result ? (
+        <summary className='collapse-title text-xl font-semibold text-green-600'>
+        5. Kiểm tra phần dưới của phương tiện
+        </summary>
+      ) : (
+        <summary className='collapse-title text-xl font-semibold'>
+        5. Kiểm tra phần dưới của phương tiện
+        </summary>
+      )}
+      <div className='collapse-content'>
         <div className="container mb-3 mx-auto p-3">
-            <form method="post flex flex-col mx-auto">
+            <form className="flex flex-col mx-auto" onSubmit={handleSubmit}>
                 <div className="form-control">
                     <div className="font-semibold text-lg max-w-lg">
                         Khung và các liên kết
                     </div>
-                    <CheckBox text={"Gia cường khung xe ngoài quy định"} />
-                    <CheckBox text={"Nứt, gẫy, biến dạng, cong vênh. mọt gỉ ở mức nhận biết được bằng mắt"} />
-                    <CheckBox text={"Các liên kết không chắc chắn"} />
+                    <label className='label cursor-pointer flex flex-row gap-5 items-start'>
+            <span className='label-text max-w-md text-justify'>
+              • Gia cường khung xe ngoài quy định.
+            </span>
+            <input
+              type='checkbox'
+              className='checkbox'
+              onChange={handleCheckboxChange}
+            />
+          </label>
+
+          <label className='label cursor-pointer flex flex-row gap-5 items-start'>
+            <span className='label-text max-w-md text-justify'>
+              • Nứt, gẫy, biến dạng, cong vênh. mọt gỉ ở mức nhận biết được bằng mắt.
+            </span>
+            <input
+              type='checkbox'
+              className='checkbox'
+              onChange={handleCheckboxChange}
+            />
+          </label>
+
+          <label className='label cursor-pointer flex flex-row gap-5 items-start'>
+            <span className='label-text max-w-md text-justify'>
+              • Các liên kết không chắc chắn.
+            </span>
+            <input
+              type='checkbox'
+              className='checkbox'
+              onChange={handleCheckboxChange}
+            />
+          </label>
                 </div>
-                <div className="form-control">
+                {/* <div className="form-control">
                     <div className="font-semibold text-lg max-w-lg">
                         Dây cáp, thanh kéo, cần đẩy, các liên kết
                     </div>
@@ -99,7 +163,7 @@ export default function PhanDuoi() {
                     Hệ thống dẫn khí xả, bầu giảm âm</div>
                     <CheckBox text={"Không đầy đủ, lắp đặt không chắc chắn"} />
                     <CheckBox text={"Mọt gỉ, rách, rò rỉ khí thải"} />
-                </div>
+                </div> */}
 
 
                 <div className="w-full mx-auto text-center">
@@ -112,5 +176,7 @@ export default function PhanDuoi() {
 
             </form>
         </div>
+        </div>
+    </details>
     )
 }

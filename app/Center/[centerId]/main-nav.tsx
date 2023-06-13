@@ -32,10 +32,16 @@ export default function MainNav({
                     text-black text-md font-semibold">
                         <li><Link href={`/Center/${centerId}/dashboard#ManageReg`}>Quản lý đăng kiểm </Link></li>
                         <li><Link href={`/Center/${centerId}/dashboard#ManageCars`}>Quản lý ô tô</Link></li>
-                        <li>
+                        <li><Link href={`/Center/${centerId}/registry`}>Đăng kiểm xe</Link>
+                            
+                            {/* 
+                            // eliminate because of error
+                            // app-index.js:32 Warning: Extra attributes from the server: open
+                                // at details
+                                // at div
+                                // at div
                             <details>
                                 <summary>
-                                    <Link href={`/Center/${centerId}/registry`}>Đăng kiểm xe</Link>
                                 </summary>
                                 <ul>
                                     <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra nhận dạng tổng quát</Link></li>
@@ -44,8 +50,8 @@ export default function MainNav({
                                     <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra môi trường</Link></li>                                    
                                     <li><Link href={`/Center/${centerId}/registry`}>Kiểm tra phần dưới của phương tiện</Link></li>
                                 </ul>
-                            </details>
-                            
+                            </details> */}
+
                         </li>
                     </ul>
                 </div>
