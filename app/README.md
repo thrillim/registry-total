@@ -28,7 +28,7 @@ File chứa định dạng CSS cho toàn ứng dụng. Bên cạnh định dạn
 ### File `page.tsx`
 - File tạo giao diện mặc định của ứng dụng khi truy cập vào đường dẫn (ví dụ: "https://localhost:3000").
 - Là file Homepage của dự án RegistryTotal
-
+![image](https://github.com/thrillim/registry-total/assets/40814521/0443d532-fdeb-4106-bf50-9ac166ef06df)
 
 ### File `Provider.tsx`:
 
