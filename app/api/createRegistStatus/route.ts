@@ -8,7 +8,7 @@ import from from '../../../.next/server/app/signIn/page';
 /* Defines the structure of the request body. */
 interface RequestBody {
   RegistCenterId: string;
-  carId: string;
+  bienSo: string;
   step1: boolean;
   step2: boolean;
   step3: boolean;
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
       const body = await request.json();
 
       // Validate that the request body contains the required fields
-      if (Number(body.RegistCenterId) === NaN || Number(body.carId) === NaN) {
+      if (Number(body.RegistCenterId) === NaN) {
         return new Response(
           JSON.stringify({
             message: 'Missing required field(s)',
@@ -53,15 +53,15 @@ export async function POST(request: Request) {
         );
       }
 
-      // Check if carId is valid
+      // Check if bienSo is valid
       const car = await prisma.car.findUnique({
         where: {
-          carId: Number(body.carId),
-        },
+          bienSo: body.bienSo,
+        }
       });
 
       if (!car) {
-        return new Response(JSON.stringify({ message: 'Invalid carId' }), {
+        return new Response(JSON.stringify({ message: 'Invalid bienSo' }), {
           status: 400,
         });
       }
@@ -93,7 +93,7 @@ export async function POST(request: Request) {
       // Check if car is first regist
       const registStatus = await prisma.registStatus.findMany({
         where: {
-          carId: Number(body.carId),
+          carId: car.carId,
           status: 'Thành công',
         },
       });
@@ -183,7 +183,7 @@ export async function POST(request: Request) {
       const newRegistStatus = await prisma.registStatus.create({
         data: {
           RegistCenterId: Number(body.RegistCenterId),
-          carId: Number(body.carId),
+          carId: car.carId,
           status: statusInput,
           statusCreatedAt: new Date(),
           statusValidUntil: validUntil,
