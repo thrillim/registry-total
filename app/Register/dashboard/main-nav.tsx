@@ -1,4 +1,5 @@
 import Logo from "@/app/components/Logo/logo"
+import Link from "next/link"
 
 export default function MainNav({
     className,
@@ -35,10 +36,10 @@ export default function MainNav({
                         <li><a href="#ManageCars">Quản lý ô tô </a></li>
                     </ul>
                 </div>
-                <a className='btn btn-ghost normal-case text-xl text-accent gap-2'>
+                <Link className='btn btn-ghost normal-case text-xl text-accent gap-2' href={"/"}>
                     <Logo />
                     <span className="max-sm:hidden">Registry Total</span>
-                </a>
+                </Link>
             </div>
             <div className="navbar-center">
                 <h1 className="max-md:hidden text-2xl font-bold text-primary">Cục Đăng kiểm Việt Nam</h1>

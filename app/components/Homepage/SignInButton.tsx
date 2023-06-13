@@ -10,12 +10,26 @@ export default function SignInButton() {
     console.log(session);
     return (
       <div className='flex justify-around gap-2 align-middle'>
-        <Link
-          className='btn btn-sm btn-outline '
-          href='#'
-        >
-          {session.user.accUsername}
-        </Link>
+        {
+          (session.user.accRole === 'Admin')
+            ? (
+              <Link
+                className='btn btn-sm btn-outline '
+                href='/Register/dashboard'
+              >
+                {session.user.accUsername}
+              </Link>
+            )
+            : (
+              <Link
+                className='btn btn-sm btn-outline '
+                href='/Center/${session.user.RegistCenterId}/account'
+              >
+                {session.user.accUsername}
+              </Link>
+            )
+        }
+
         <button
           className='btn btn-sm btn-error'
           onClick={() => signOut({ callbackUrl: 'http://localhost:3000' })}
