@@ -11,7 +11,7 @@ Link [Github](https://github.com/thrillim/registry-total): https://github.com/th
 1. **Lê Hoàng Minh Hà** - 21020621: front-end developing
 - Thiết kế giao diện, bố cục cho ứng dụng web với Figma.
 - Phát triển giao diện ứng dụng web cùng Tailwindcss và DaisyUI.
-- Tạo giao diện responsive cho ứng dụng web.
+- Tạo giao diện responsive cho ứng dụng web, giúp người dùng tương tác với ứng dụng qua giao diện.
 - Xử lí input từ người dùng: tạo các ràng buộc từ input của người dùng.
 2. **Hoàng Thị Thu Hà** - 21020189: back-end developing
 - Tạo API, xử lý các request gửi về server.
