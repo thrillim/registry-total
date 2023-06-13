@@ -49,15 +49,15 @@ export default function NavBar() {
       </div>
       <div className='navbar-center hidden lg:flex'>
         <ul className='menu menu-horizontal text-secondary px-1'>
-          <li>
+          {/* <li>
             <a>Tin tức</a>
           </li>
           <li>
             <a>Hướng dẫn</a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a href='#about'>Giới thiệu</a>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className='sm:flex navbar-end gap-1'>

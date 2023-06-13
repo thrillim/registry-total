@@ -25,7 +25,7 @@ export default async function CenterAccount({
   else
     return (
       <>
-        <div className='flex flex-col bg-white'>
+        <div className='flex flex-col  w-full bg-white'>
           <div className='border-b z-50'>
             <NavBar centerId={params.centerId}/>
           </div>
