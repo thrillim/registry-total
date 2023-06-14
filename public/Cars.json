@@ -1,0 +1,13 @@
+[
+    {
+        "bienSo": "29A-12345",
+        "ownerName": "Nguyễn Văn A",
+        "loai": "Xe tải",
+        "nhanHieu": "Huyndai",
+        "centerName": "Trung tâm 1",
+        "centerProvince": "Hà Nội",
+        "statusCreatedAt": "2020-01-01",
+        "statusUpdatedAt": "2020-01-01",
+        "statusValidUntil": "2023-06-13"
+    }
+]

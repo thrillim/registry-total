@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,6 +12,13 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'sign-in': "url('../public/signin_xl.svg')",
+        'car': "url('../public/car.svg')",
+        'uet': "url('../public/uet.png')",
+        'vnu': "url('../public/vnu.png')",
+        'fit': "url('../public/fit.png')",
+        'ava0': "url('../public/ava0.png')",
+        'ava1': "url('../public/ava1.png')",
       },
     },
   },
@@ -19,15 +27,15 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          "primary": "#2B6488",
-          "secondary": "#14253D",
-          "accent": "#A80505",
-          "neutral": "#FFE7CC",
-          "base-100": "#FAFAFF",
-          "info": "#8CC6D9",
-          "success": "#18AF7A",
-          "warning": "#F9CF43",
-          "error": "#F16A6C",
+          "primary": "#02223C",
+          "secondary": "#075985",
+          "accent": "#006661",
+          "neutral": "#B6D4EC",
+          "base-100": "#FFFFFF",
+          "info": "#B6D4EC",
+          "success": "#bae6fd",
+          "warning": "#fcd34d",
+          "error": "#b91c1c",
         },
       },
       // "dark",
