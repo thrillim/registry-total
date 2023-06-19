@@ -1,7 +1,7 @@
 # Bài tập lớn môn Phát triển ứng dụng Web
 Link [Github](https://github.com/thrillim/registry-total): https://github.com/thrillim/registry-total
 
-![Giới thiệu dự án](https://github.com/thrillim/registry-total/assets/40814521/ee891557-855c-4c23-9121-c2c560a54955)
+![Giới thiệu dự án](https://github.com/thrillim/registry-total/assets/40814521/d513b029-dbb5-4d57-b57a-9bafaddeb31f)
 
 ## Lớp môn học: INT3306 20
 - Giảng viên lý thuyết: **TS. Lê Đình Thanh**
@@ -24,7 +24,7 @@ Link [Github](https://github.com/thrillim/registry-total): https://github.com/th
 
 
 ## Về dự án Registry Total
-![Homepage của dự án](https://github.com/thrillim/registry-total/assets/40814521/febef42b-f3b1-4190-b7ae-dc6e6e618fe4)
+[Homepage của dự án](https://github.com/thrillim/registry-total/assets/40814521/7c7e492d-71a8-4096-a61b-f53d5a89a342)
 **Registry Total** là ứng dụng web được phát triển nhằm hỗ trợ Cục đăng kiểm và các Trung tâm đăng kiểm trên toàn quốc quản lý đăng kiểm đối với xe ô tô.
 
 ## Công nghệ sử dụng trong dự án:
