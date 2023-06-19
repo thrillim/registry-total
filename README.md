@@ -121,8 +121,19 @@ https://github.com/thrillim/registry-total/assets/40814521/5ef36c5f-6236-445d-b3
 
 
 ### An ninh
+#### Xác thực
+Người dùng sau khi đăng nhập với tên tài khoản, mật khẩu mới có thể truy cập các trang chứa thông tin bảo mật. Cài đặt sử dụng NextAuth.
+#### Quản lý phiên
+Token được lưu ở cookie và gửi về server ở từng request. Cài đặt bằng JSON Web Token kết hợp NextAuth.
+#### Điều khiển truy cập
+Tài khoản khác nhau truy cập vào các trang khác nhau dựa trên quyền của mình. Nếu truy cập không hợp lệ sẽ được điều hướng sang trang khác (ví dụ trang chủ).
 
 
+https://github.com/thrillim/registry-total/assets/40814521/795c4362-773e-4ac0-ba26-e615ebfcd023
+
+
+#### Mã hoá
+Mật khẩu được mã hoá bằng bcrypt trước khi lưu vào database.
 ### Viết lại và/hoặc định tuyến URL
 - Sử dụng định tuyến `app` của **Next.js**: `http://localhost:3000` là cổng mặc định của server **Next.js**
   + Đường dẫn tới trang chủ (homepage) của hệ thống có dạng: `{http://localhost:3000}/`
@@ -138,8 +149,9 @@ https://github.com/thrillim/registry-total/assets/40814521/5ef36c5f-6236-445d-b3
 
   + Đường dẫn tới trang đăng kiểm ô tô của Trung tâm đăng kiểm: `Center/{centerID}/registry`
   ![image](https://github.com/thrillim/registry-total/assets/40814521/9b25a6a0-637b-4d1d-8b9c-9ee8e9bde750)
-
+- Định tuyến URL dùng redirect từ next/navigation. Người dùng được tự động chuyển trang khi không có quyền truy cập trang đó (kiểm tra bằng session).
 ### Thao tác CSDL theo lập trình hướng đối và độc lập CSDL
+- Sử dụng Prisma (Next-generation Node.js and TypeScript ORM) để tạo lược đồ cơ sở dữ liệu ngay trong thư mục code. Thao tác với cơ sở dữ liệu theo lập trình hướng đối tượng thông qua lược đồ này giúp độc lập cơ sở dữ liệu, phù hợp với cả lược đồ quan hệ và không quan hệ.
 
 
 
