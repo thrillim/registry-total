@@ -91,11 +91,12 @@ https://github.com/thrillim/registry-total/assets/40814521/f8752f70-cff8-4aae-96
 ![image](https://github.com/thrillim/registry-total/assets/40814521/85bfbd20-7542-4b4c-9555-768953779c9f)
   Mẫu giấy chứng nhận đăng kiểm: [Certificate.pdf](https://github.com/thrillim/registry-total/files/11787370/Certificate.pdf)
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm.
-  ![image](https://github.com/thrillim/registry-total/assets/40814521/0089abbc-a9bb-425d-b4d5-09daf405601a)
+![image](https://github.com/thrillim/registry-total/assets/40814521/25265c5b-03e4-431b-80a5-01c7a95b51f4)
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở trung tâm.
 ![image](https://github.com/thrillim/registry-total/assets/40814521/18f574e6-e1c1-4204-9c01-75d3acab4222)
 
 ### Thiết kế giao diện
+- Theme và UI Components: [daisyUI](https://daisyui.com/), [shadcnUI](https://ui.shadcn.com/docs)
 
 ### Hiệu năng
 
