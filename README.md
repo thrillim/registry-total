@@ -72,7 +72,7 @@ Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page
 #### Đối với cục Đăng kiểm
 - Tạo lập CSDL về xe ô tô đã qua đăng ký (cấp biển số). Cho phép upload từ file danh sách các xe ô tô đã qua đăng ký
 ![image](https://github.com/thrillim/registry-total/assets/40814521/bcad4c77-d019-4746-aaf1-08bf5a8788e6)
-- Tạo trung tâm đăng kiểm mới và cấp tài khoản sử dụng cho các trung tâm đăng kiểm
+- Theo dõi, thống kê trung tâm đăng kiểm, tạo trung tâm đăng kiểm mới và cấp tài khoản sử dụng cho các trung tâm đăng kiểm
 ![image](https://github.com/thrillim/registry-total/assets/40814521/4d628491-8c96-4efd-b083-cb156512d383)
 ![image](https://github.com/thrillim/registry-total/assets/40814521/d42371ed-948d-4854-be24-8fb08629c1a8)
 ![image](https://github.com/thrillim/registry-total/assets/40814521/e30c42af-81d2-44ab-97f4-4537d92cb2b6)
@@ -103,6 +103,15 @@ https://github.com/thrillim/registry-total/assets/40814521/f8752f70-cff8-4aae-96
 
 
 ### Xử lý nhập liệu
+
+
+https://github.com/thrillim/registry-total/assets/40814521/55a49c86-0447-44e8-a053-0070ede1ae11
+
+
+
+https://github.com/thrillim/registry-total/assets/40814521/5ef36c5f-6236-445d-b333-3eb1499529b5
+
+
 
 
 ### An ninh
