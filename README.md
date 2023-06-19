@@ -77,8 +77,13 @@ Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page
 ![image](https://github.com/thrillim/registry-total/assets/40814521/d42371ed-948d-4854-be24-8fb08629c1a8)
 ![image](https://github.com/thrillim/registry-total/assets/40814521/e30c42af-81d2-44ab-97f4-4537d92cb2b6)
 
+
+https://github.com/thrillim/registry-total/assets/40814521/f8752f70-cff8-4aae-9691-f66696f64d6c
+
+
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm ở từng trung tâm đăng kiểm, hay trên toàn quốc
 ![image](https://github.com/thrillim/registry-total/assets/40814521/6f6f9e17-d5ad-4776-9c10-df8501df50f2)
+
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở từng trung tâm đăng kiểm, hay trên toàn quốc
 ![image](https://github.com/thrillim/registry-total/assets/40814521/63047cb8-54e5-4384-9048-34dbfc5cab82)
 #### Đối với Trung tâm đăng kiểm
@@ -89,4 +94,24 @@ Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page
   ![image](https://github.com/thrillim/registry-total/assets/40814521/0089abbc-a9bb-425d-b4d5-09daf405601a)
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở trung tâm.
 ![image](https://github.com/thrillim/registry-total/assets/40814521/18f574e6-e1c1-4204-9c01-75d3acab4222)
+
+### Thiết kế giao diện
+
+### Hiệu năng
+
+### Phong cách lập trình
+
+
+### Xử lý nhập liệu
+
+
+### An ninh
+
+
+### Viết lại và/hoặc định tuyến URL
+
+
+### Thao tác CSDL theo lập trình hướng đối và độc lập CSDL
+
+
 
