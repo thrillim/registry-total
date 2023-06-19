@@ -83,7 +83,8 @@ Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page
 ![image](https://github.com/thrillim/registry-total/assets/40814521/63047cb8-54e5-4384-9048-34dbfc5cab82)
 #### Đối với Trung tâm đăng kiểm
 - Ghi nhận kết quả đăng kiểm và cấp giấy chứng nhận đăng kiểm.
-
+![image](https://github.com/thrillim/registry-total/assets/40814521/85bfbd20-7542-4b4c-9555-768953779c9f)
+  Mẫu giấy chứng nhận đăng kiểm: [Certificate.pdf](https://github.com/thrillim/registry-total/files/11787370/Certificate.pdf)
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm.
   
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở trung tâm.
