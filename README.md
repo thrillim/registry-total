@@ -129,7 +129,10 @@ Token được lưu ở cookie và gửi về server ở từng request. Cài đ
 Tài khoản khác nhau truy cập vào các trang khác nhau dựa trên quyền của mình. Nếu truy cập không hợp lệ sẽ được điều hướng sang trang khác (ví dụ trang chủ).
 
 
-https://github.com/thrillim/registry-total/assets/40814521/795c4362-773e-4ac0-ba26-e615ebfcd023
+
+https://github.com/thrillim/registry-total/assets/40814521/4183923a-ec24-4cec-a514-6159b9e97b6d
+
+
 
 
 #### Mã hoá
