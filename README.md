@@ -82,7 +82,7 @@ https://github.com/thrillim/registry-total/assets/40814521/f8752f70-cff8-4aae-96
 
 
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm ở từng trung tâm đăng kiểm, hay trên toàn quốc
-![image](https://github.com/thrillim/registry-total/assets/40814521/6f6f9e17-d5ad-4776-9c10-df8501df50f2)
+![image](https://github.com/thrillim/registry-total/assets/40814521/c759ba62-cee9-47d5-98bf-07ece4580486)
 
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở từng trung tâm đăng kiểm, hay trên toàn quốc
 ![image](https://github.com/thrillim/registry-total/assets/40814521/63047cb8-54e5-4384-9048-34dbfc5cab82)
@@ -91,7 +91,7 @@ https://github.com/thrillim/registry-total/assets/40814521/f8752f70-cff8-4aae-96
 ![image](https://github.com/thrillim/registry-total/assets/40814521/85bfbd20-7542-4b4c-9555-768953779c9f)
   Mẫu giấy chứng nhận đăng kiểm: [Certificate.pdf](https://github.com/thrillim/registry-total/files/11787370/Certificate.pdf)
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm.
-![image](https://github.com/thrillim/registry-total/assets/40814521/25265c5b-03e4-431b-80a5-01c7a95b51f4)
+![image](https://github.com/thrillim/registry-total/assets/40814521/fe9517f3-fb1d-4e65-94f8-d24dd98c9092)
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở trung tâm.
 ![image](https://github.com/thrillim/registry-total/assets/40814521/18f574e6-e1c1-4204-9c01-75d3acab4222)
 
