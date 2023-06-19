@@ -101,8 +101,13 @@ https://github.com/thrillim/registry-total/assets/40814521/f8752f70-cff8-4aae-96
 ### Hiệu năng
 
 ### Phong cách lập trình
-
-
+- Tạo, sử dụng, tái sử dụng các components: giúp lập trình phong cách hướng đối tượng, dễ quản lý các thành phần trong code, tiết kiệm thời gian.
+- Mã giao diện được đặt trong:
+  + `app/components`: các components được sử dụng nhiều lần trong toàn dự án.
+  + `app/Center`: các components tạo nên giao diện mà người dùng là Trung tâm đăng kiểm tương tác để sử dụng hệ thống.
+  + `app/Register`: các components tạo nên giao diện mà người dùng là Cục đăng kiểm tương tác để sử dụng hệ thống.
+  + `app/signIn`: giao diện trong Đăng nhập vào hệ thống.
+- Mã xử lý nghiệp vụ được đặt trong `app/api`.
 ### Xử lý nhập liệu
 
 
