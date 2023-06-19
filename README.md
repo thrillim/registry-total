@@ -124,7 +124,20 @@ https://github.com/thrillim/registry-total/assets/40814521/5ef36c5f-6236-445d-b3
 
 
 ### Viết lại và/hoặc định tuyến URL
+- Sử dụng định tuyến `app` của **Next.js**: `http://localhost:3000` là cổng mặc định của server **Next.js**
+  + Đường dẫn tới trang chủ (homepage) của hệ thống có dạng: `{http://localhost:3000}/`
+  ![image](https://github.com/thrillim/registry-total/assets/40814521/aabaa169-4ce8-43eb-bf4b-8d828236f967)
 
+  + Đường dẫn tới trang dashboard của Cục đăng kiểm: `/Register/dashboard`
+  ![image](https://github.com/thrillim/registry-total/assets/40814521/d34a449a-1a7b-4d77-a728-1085a60c39e1)
+
+  + Đường dẫn tới trang dashboard của Trung tâm đăng kiểm: `Center/{centerID}/dashboard`
+
+  + Đường dẫn tới trang thông tin tài khoản của Trung tâm đăng kiểm: `Center/{centerID}/account`
+    ![image](https://github.com/thrillim/registry-total/assets/40814521/432f4a52-4e59-4498-9d75-c7a9780bacf6)
+
+  + Đường dẫn tới trang đăng kiểm ô tô của Trung tâm đăng kiểm: `Center/{centerID}/registry`
+  ![image](https://github.com/thrillim/registry-total/assets/40814521/9b25a6a0-637b-4d1d-8b9c-9ee8e9bde750)
 
 ### Thao tác CSDL theo lập trình hướng đối và độc lập CSDL
 
