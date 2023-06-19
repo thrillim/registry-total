@@ -24,7 +24,7 @@ Link [Github](https://github.com/thrillim/registry-total): https://github.com/th
 
 
 ## Về dự án Registry Total
-[Homepage của dự án](https://github.com/thrillim/registry-total/assets/40814521/7c7e492d-71a8-4096-a61b-f53d5a89a342)
+![Homepage của dự án](https://github.com/thrillim/registry-total/assets/40814521/7c7e492d-71a8-4096-a61b-f53d5a89a342)
 **Registry Total** là ứng dụng web được phát triển nhằm hỗ trợ Cục đăng kiểm và các Trung tâm đăng kiểm trên toàn quốc quản lý đăng kiểm đối với xe ô tô.
 
 ## Công nghệ sử dụng trong dự án:
