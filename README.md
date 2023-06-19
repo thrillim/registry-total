@@ -71,15 +71,20 @@ Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page
 ### Tính năng đã cài đặt
 #### Đối với cục Đăng kiểm
 - Tạo lập CSDL về xe ô tô đã qua đăng ký (cấp biển số). Cho phép upload từ file danh sách các xe ô tô đã qua đăng ký
-![image](https://github.com/thrillim/registry-total/assets/40814521/2fb6cac4-876e-4637-a70b-ecc77b5f9ee2)
+![image](https://github.com/thrillim/registry-total/assets/40814521/bcad4c77-d019-4746-aaf1-08bf5a8788e6)
 - Tạo trung tâm đăng kiểm mới và cấp tài khoản sử dụng cho các trung tâm đăng kiểm
-![image](https://github.com/thrillim/registry-total/assets/40814521/067d3991-50f0-4438-945e-e16c3185da57)
-![image](https://github.com/thrillim/registry-total/assets/40814521/32cb720f-668e-4e65-afae-ed53e997a80d)
+![image](https://github.com/thrillim/registry-total/assets/40814521/4d628491-8c96-4efd-b083-cb156512d383)
+![image](https://github.com/thrillim/registry-total/assets/40814521/d42371ed-948d-4854-be24-8fb08629c1a8)
+![image](https://github.com/thrillim/registry-total/assets/40814521/e30c42af-81d2-44ab-97f4-4537d92cb2b6)
+
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm ở từng trung tâm đăng kiểm, hay trên toàn quốc
-![image](https://github.com/thrillim/registry-total/assets/40814521/91bd6dbe-794f-4548-b937-b92600c90cdc)
+![image](https://github.com/thrillim/registry-total/assets/40814521/6f6f9e17-d5ad-4776-9c10-df8501df50f2)
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở từng trung tâm đăng kiểm, hay trên toàn quốc
-![image](https://github.com/thrillim/registry-total/assets/40814521/5b259faf-1a93-4b13-b088-2b1410f0d7fd)
+![image](https://github.com/thrillim/registry-total/assets/40814521/63047cb8-54e5-4384-9048-34dbfc5cab82)
 #### Đối với Trung tâm đăng kiểm
 - Ghi nhận kết quả đăng kiểm và cấp giấy chứng nhận đăng kiểm.
+
 - Theo dõi và thống kê số lượng, danh sách xe đã được đăng kiểm hàng tháng, quý, năm.
+  
 - Theo dõi và thống kê số lượng, danh sách xe sắp hết hạn đăng kiểm hàng tháng. Dự báo số lượng xe sẽ đăng kiểm mới và đăng kiểm lại hàng tháng ở trung tâm.
+
