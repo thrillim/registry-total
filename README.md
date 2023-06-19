@@ -51,22 +51,22 @@ MySQL là một hệ quản trị cơ sở dữ liệu quan hệ nguồn mở đ
 
 ## [Định tuyến và cấu trúc thư mục](https://nextjs.org/docs/app/building-your-application/routing)
 ### Nguyên tắc cơ bản về định tuyến trong Next.js
-![image](https://github.com/thrillim/registry-total/assets/40814521/4b34d169-315b-4d2d-be3c-60c235cb308d)
-![image](https://github.com/thrillim/registry-total/assets/40814521/601cc991-c5a6-4f90-86d0-d4e6f7fe1da8)
+![image](https://github.com/thrillim/registry-total/assets/40814521/6de76ee7-ff23-44a4-8d93-45d877437c4a)
+![image](https://github.com/thrillim/registry-total/assets/40814521/8b2c8464-23a3-48aa-8829-437b331609b5)
 ### Định tuyến `app`
 - Bộ định tuyến `app` hoạt động trong thư mục `app`, hỗ trợ chia sẻ giao diện chung, định tuyến lồng, tải trạng thái, xử lý lỗi,...
 - Các components bên trong `app` mặc định là [React Server Components](https://nextjs.org/docs/getting-started/react-essentials#server-components).
 ### Chức năng của thư mục và tệp
 - Thư mục: được sử dụng để định nghĩa route. Một route là một đường dẫn đơn lẻ tới thư mục lồng nhau, tuân theo cấu trúc phân cấp file-system từ thư mục gốc (root folder) tới thư mục lá cuối (final leaf folder) có bao gồm một file `page.js` (hoặc `page.tsx`.
 - Tệp: được sử dụng để tạo giao diện người dùng cho một route segment.
-![image](https://github.com/thrillim/registry-total/assets/40814521/d2165105-d579-4da6-adae-838bff3f5adf)
+![image](https://github.com/thrillim/registry-total/assets/40814521/e1d573ed-d290-4f0d-8908-9a672e1d20d1)
 ### Cấu trúc Phân cấp Component:
-![image](https://github.com/thrillim/registry-total/assets/40814521/8c6aba78-6c8d-4108-afa3-31f8f928b054)
-![image](https://github.com/thrillim/registry-total/assets/40814521/342cfa66-7880-4ba5-9183-dea5f53b3941)
+![image](https://github.com/thrillim/registry-total/assets/40814521/1587a470-dace-4b71-854d-98cfb05dd44e)
+![image](https://github.com/thrillim/registry-total/assets/40814521/5aceab5a-ad4a-4e3d-8987-5aca2d00c3e6)
 Bên cạnh đó, chỉ có nội dung được trả về từ `page.js` (`page.tsx`) và `route.js` (`route.tsx`) sẽ được định tuyến:
-![image](https://github.com/thrillim/registry-total/assets/40814521/639ce726-5242-4705-ba40-e2f562b08d2c)
+![image](https://github.com/thrillim/registry-total/assets/40814521/dbefbcc7-ef3f-4f21-8b73-7e67e64f4c60)
 ### Parital Rendering
-![image](https://github.com/thrillim/registry-total/assets/40814521/2ab41b9f-36f4-4388-9450-e5436390d6d2)
+![image](https://github.com/thrillim/registry-total/assets/40814521/e3cf77ca-c29a-4722-9569-6e6d81eb98b5)
 
 ### Tính năng đã cài đặt
 #### Đối với cục Đăng kiểm
